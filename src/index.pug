@@ -3,7 +3,7 @@ doctype
 html(lang='en')
   head
     
-    - var title = "Coursecode"
+    - var title = "KOYAP"
     - var keywords = "Keywords var keywords"
     - var description = "Description var description"
     title= title
@@ -100,10 +100,18 @@ html(lang='en')
  
 
           
-    section#sec-1.section__1
+    section.section__1
       .container
         .row
           .col.m12.s12.l12.xl12
+            .image__left
+              img(data-src='img/section__1_ship.svg', alt='challenge')
+              
+            .image__right
+              img(data-src='img/section__1_plane.svg', alt='challenge')
+
+              
+          
             h1.title Book Your Favorite Destination <br>and get up to 70% Off!
             p.sub We have helped over 17,849 clients book their dream Vacation.
             
@@ -145,6 +153,8 @@ html(lang='en')
                 a.red(href='javascript:;') Get a free quote
               div
               
+              
+              
 
 
 
@@ -152,25 +162,31 @@ html(lang='en')
       .container
         .row
           .col.m12.s12.l12.xl12
+            .image__left
+              img(data-src='img/section__1_parrot_2.svg', alt='challenge')
+              
             ul.brand
               li
-                img(data-src='img/section__1_brand.svg', alt='challenge')
+                img(data-src='img/logo__1.svg', alt='challenge')
               li
-                img(data-src='img/section__1_brand.svg', alt='challenge')
+                img(data-src='img/logo__2.svg', alt='challenge')
               li
-                img(data-src='img/section__1_brand.svg', alt='challenge')
+                img(data-src='img/logo__3.svg', alt='challenge')
               li
-                img(data-src='img/section__1_brand.svg', alt='challenge')
+                img(data-src='img/logo__4.svg', alt='challenge')
               li
-                img(data-src='img/section__1_brand.svg', alt='challenge')
+                img(data-src='img/logo__5.svg', alt='challenge')
               li
-                img(data-src='img/section__1_brand.svg', alt='challenge')
+                img(data-src='img/logo__6.svg', alt='challenge')
+              li
+                img(data-src='img/logo__7.svg', alt='challenge')
+                
+            .image__right
+              img(data-src='img/section__1_parrot_1.svg', alt='challenge')
 
 
 
-
-
-    section#sec-2.section__2
+    section.section__2
       .container
         .row
           .col.m12.s12.l12.xl12
@@ -335,7 +351,7 @@ html(lang='en')
           
           
           
-    section#sec-3.section__3
+    section.section__3
       .container
         .row
           .col.m12.s12.l12.xl12
@@ -365,50 +381,50 @@ html(lang='en')
             
             ul.brand
               li
-                img(data-src='img/brand__1.png', alt='challenge')
+                img(data-src='img/brand__1.svg', alt='challenge')
               li
-                img(data-src='img/brand__2.png', alt='challenge')
+                img(data-src='img/brand__2.svg', alt='challenge')
               li
-                img(data-src='img/brand__3.png', alt='challenge')
+                img(data-src='img/brand__3.svg', alt='challenge')
               li
-                img(data-src='img/brand__4.png', alt='challenge')
+                img(data-src='img/brand__4.svg', alt='challenge')
               li
-                img(data-src='img/brand__5.png', alt='challenge')
+                img(data-src='img/brand__5.svg', alt='challenge')
               li
-                img(data-src='img/brand__6.png', alt='challenge')
+                img(data-src='img/brand__6.svg', alt='challenge')
               li
-                img(data-src='img/brand__7.png', alt='challenge')
+                img(data-src='img/brand__7.svg', alt='challenge')
               li
-                img(data-src='img/brand__8.png', alt='challenge')
+                img(data-src='img/brand__8.svg', alt='challenge')
               li
-                img(data-src='img/brand__9.png', alt='challenge')
+                img(data-src='img/brand__9.svg', alt='challenge')
               li
-                img(data-src='img/brand__10.png', alt='challenge')
+                img(data-src='img/brand__10.svg', alt='challenge')
               
             
             h3.title__line Our partner airlines
             
             ul.brand
               li
-                img(data-src='img/brand__111.png', alt='challenge')
+                img(data-src='img/brand__11.svg', alt='challenge')
               li
-                img(data-src='img/brand__12.png', alt='challenge')
+                img(data-src='img/brand__12.svg', alt='challenge')
               li
-                img(data-src='img/brand__13.png', alt='challenge')
+                img(data-src='img/brand__13.svg', alt='challenge')
               li
-                img(data-src='img/brand__14.png', alt='challenge')
+                img(data-src='img/brand__14.svg', alt='challenge')
               li
-                img(data-src='img/brand__15.png', alt='challenge')
+                img(data-src='img/brand__15.svg', alt='challenge')
               li
-                img(data-src='img/brand__16.png', alt='challenge')
+                img(data-src='img/brand__16.svg', alt='challenge')
               li
-                img(data-src='img/brand__17.png', alt='challenge')
+                img(data-src='img/brand__17.svg', alt='challenge')
               li
-                img(data-src='img/brand__18.png', alt='challenge')
+                img(data-src='img/brand__18.svg', alt='challenge')
               li
-                img(data-src='img/brand__19.png', alt='challenge')
+                img(data-src='img/brand__19.svg', alt='challenge')
               li
-                img(data-src='img/brand__20.png', alt='challenge')
+                img(data-src='img/brand__20.svg', alt='challenge')
               
                 
                   
@@ -424,7 +440,7 @@ html(lang='en')
             
             
           
-    section#sec-4.section__4
+    section.section__4
       .container
         .row
           .col.m12.s12.l12.xl12
@@ -433,8 +449,8 @@ html(lang='en')
         .row
           .col.m12.s12.l12.xl12
             .tab__bot
-              a.tab.active(href='javascript:;') cRUISE
-              a.tab(href='javascript:;') Flight
+              a.tab.active(href='javascript:;'  data-num='1') cRUISE
+              a.tab(href='javascript:;' data-num='2') Flight
               
             .tab__content
               .tab_n.active
@@ -493,26 +509,53 @@ html(lang='en')
             
             
           
-    section#sec-5.section__5.none
+    section.section__5
       .container
         .row
-          .col.m12.s12.l12.xl12
-            h2 section__5
+          .col.m12.s12.l6.xl5
+            h2.title About us
+            
+            p We’ve been in the travel industry for three generations and we truly love every part of it. Our passion for travel drives us to deliver the ultimate experience for our clients, be it a cruise to Alaska or a flight to Tanzania, our aim always stays true, to eliminate the hassle of booking so you can look forward to the best part of your journey. No matter what corner of the world you want to explore, we got your back.
 
-  
-  
-          
-    section.section__.event__1.none
+          .col.m12.s12.l6.xl7
+            .box__img
+              img(data-src='img/section__5_frame.svg', alt='challenge')
+            
+            
+
+
+
+    footer
       .container
         .row
-          .col.m12.s12.l12.xl12
-            ul.top
-              li(data-top='1')
-                a.active(href='javascript:;') Account detals
-              li(data-top='2')
-                a(href='javascript:;') MY ITEMS
-              li(data-top='3')
-                a(href='javascript:;') QI LIBRAR
+          .col.m12.s12.l6.xl7
+            .box__img
+              img(data-src='img/footer_ship.svg', alt='challenge')
+          
+          .col.m12.s12.l6.xl5
+          
+            h2.title Sign up for special prices, frequent discounts, exclusive offers, and other perks!
+
+            form(method='POST', action='javascript:void(null);')
+              // Hidden Required Fields
+              
+              ul
+                li
+                  label Name
+                  .form_input
+                    span.field
+                      input(type='text', name='name', required='', value='', placeholder='Name')
+                li
+                  label Email
+                  .form_input
+                    span.field
+                      input.mail(type='email', name='email', required='', value='', placeholder='Email')
+
+              button.red(type='submit', name='send') Sign up
+          
+          
+          
+                
 
     a.call.none(href='javascript:;')
       img(data-src='img/call.svg', alt='call')

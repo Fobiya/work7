@@ -18,8 +18,25 @@ define(["jquery"], function($) {
 
        $('.section__4 .tab__bot>a').removeClass('active');
        $(this).addClass('active');
+     
+     
+      var num = $(this).data('num');
+      
+      
+      $('.section__4 .tab__content>div.tab_n').removeClass('active');
+      $('.section__4 .tab__content>div:nth-child('+ num +')').addClass('active');
+     
+     
     });
 
+  
+     $('.section__4 .tab__content .list li a').click(function(){
+
+       $('.section__4 .tab__content .list li').removeClass('open');
+       $(this).parent().addClass('open');
+    });
+  
+  
   
   
   
@@ -233,7 +250,7 @@ define(["jquery"], function($) {
   }
 }
 
-for(let div of document.querySelectorAll('footer')){
+for(let div of document.querySelectorAll('section')){
 
   new cssClassTogglerScroll({
     element: div,
@@ -770,7 +787,7 @@ for(let div of document.querySelectorAll('footer')){
         slidesToScroll: 1,
       
   centerMode: true,
-  centerPadding: '100px',
+  centerPadding: '130px',
 //        variableWidth: true,
 
       
