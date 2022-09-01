@@ -236,7 +236,7 @@ define(["jquery"], function($) {
       }
       else{
         if(data.cssClass){
-          entry.target.classList.remove(data.cssClass);
+//          entry.target.classList.remove(data.cssClass);
         }
         if(data.onHidden){
           data.onHidden();
@@ -256,6 +256,58 @@ for(let div of document.querySelectorAll('section')){
     element: div,
     cssClass: 'act__',
     threshold: 0.1,
+    onVisible: () => {
+
+    },
+    onHidden: () => {
+//      console.log('section__products active');
+    }
+  });
+
+}
+  
+
+for(let div of document.querySelectorAll('section>div')){
+
+  new cssClassTogglerScroll({
+    element: div,
+    cssClass: 'cont__',
+    threshold: 0.35,
+    onVisible: () => {
+
+    },
+    onHidden: () => {
+//      console.log('section__products active');
+    }
+  });
+
+}
+    
+
+for(let img of document.querySelectorAll('img.bottom__cor')){
+
+  new cssClassTogglerScroll({
+    element: img,
+    cssClass: 'cont__',
+    threshold: 0.1,
+    onVisible: () => {
+
+    },
+    onHidden: () => {
+//      console.log('section__products active');
+    }
+  });
+
+}
+  
+  
+  
+  for(let div of document.querySelectorAll('section ul.brand')){
+
+  new cssClassTogglerScroll({
+    element: div,
+    cssClass: 'cont__',
+    threshold: 0.05,
     onVisible: () => {
 
     },
@@ -314,10 +366,10 @@ for(let div of document.querySelectorAll('section')){
   $(window).scroll(function() {
       var height = $(window).scrollTop();
 
-      if(height > 150 ) {
-            $('.menu__scroll').addClass('hide-nav');
+      if(height > 50 ) {
+            $('header').addClass('top');
       } else {
-           $('.menu__scroll').removeClass('hide-nav');
+           $('header').removeClass('top');
       }
   });
 
@@ -787,7 +839,7 @@ for(let div of document.querySelectorAll('section')){
         slidesToScroll: 1,
       
   centerMode: true,
-  centerPadding: '130px',
+  centerPadding: '120px',
 //        variableWidth: true,
 
       
