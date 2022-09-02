@@ -94,10 +94,19 @@
 //  margin-right: 10px;
 //  margin-top: 2px;
 //}
+input.error{
+  color: #ff0000 !important;
 
+    &:focus::placeholder,  &::placeholder { 
+        color: #ff0000;
 
-.error, [type=checkbox].error ~ .checkbox-on:after, option.error {
-  border-bottom: 2px solid rgba(255, 0, 0, 1) !important;
+  }
+}
+
+input.error, input[type=checkbox].error ~ .checkbox-on:after, option.error {
+//  border-bottom: 2px solid rgba(255, 0, 0, 1) !important;
+  
+  
 //  box-shadow: inset   0 0 25px   rgba(255, 0, 0, .4) !important;
 
 //   border-radius: 10px !important;
@@ -237,18 +246,19 @@ input {
   margin-bottom: 10px;
   color: #263954;
 	
-  font: 400 14px/1.2em var(--l);
+  font: 400 14px/1.2em var(--p);
 
   &::placeholder {
 //    text-shadow: 0 0 15px rgba(22, 5, 74, 0.51);
       color: rgba(149, 166, 200, 1);
     transition: opacity 0.3s ease;
- 
+   font: 400 14px/1.2em var(--p);
   }
 
   &:focus::placeholder {
       color: rgba(149, 166, 200, 1);
     transition: opacity 0.3s ease;
+      font: 400 14px/1.2em var(--p);
   }
 
 

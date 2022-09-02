@@ -94,43 +94,143 @@ html(lang='en')
             
             
             .tab__form
-              div
-                .form
-                  a.challenge(href='javascript:;')
-                    img(data-src='img/challenge.svg', alt='challenge')
+              div.active
 
-                  form(method='POST', action='javascript:void(null);')
+                form(method='POST', action='javascript:void(null);')
+                  .form
+                    a.challenge(href='javascript:;')
+                      img(data-src='img/challenge.svg', alt='challenge')
 
-                    ul
-                      li
-                        .box__tab
-                          a.cruise.select(href='javascript:;') Cruise
-                          a.travelling(href='javascript:;') Flight
-
-
-                      li 
+                      ul
+                        li
+                          .box__tab
+                            a.cruise.select(href='javascript:;') Cruise
+                            a.travelling(href='javascript:;') Flight
 
 
+                        li.email
+                          .block
+                            lable Email
 
-                      li
-                        lable Phone Number
+                            .form_input
+                              span.field
+                                input.mail(type='email', name='email', required='', value='', placeholder='Email')
 
-                        .form_input
-                          span.field
-                            input.phone(type='text', name='phone', required='', value='', placeholder='Add phone number')
+                        li.phone
+                          .block
+                            lable Phone Number
 
-                      li
+                            .form_input
+                              span.field
+                                input.phone(type='text', name='phone', required='', value='', placeholder='Add phone number')
 
-                        lable Name
+                        li.name
+                          .block
+                            lable Name
 
-                        .form_input
-                          span.field
-                            input(type='text', name='name', required='', value='', placeholder='Enter your name')
+                            .form_input
+                              span.field
+                                input.phone(type='text', name='phone', required='', value='', placeholder='Add phone number')
 
-                a.red(href='javascript:;') Get a free quote
+
+                        hr
+
+
+                        li.destination
+                          .block
+                            lable Destination
+
+                            .form_input
+                              span.field
+                                input(type='text', name='destination', required='', value='', placeholder='Add destination')
+
+
+
+                        li.sel_50.port
+                          .block
+                            lable Departure Port
+
+                            .form_input
+                              span.field
+                                input(type='text', name='destination', required='', value='', placeholder='Add departure port')
+                        li.data
+                          .block
+                            lable Departure date
+
+                            .form_input
+                              span.field
+                                input(type='date', name='data', required='', value='', placeholder='Add data')
+
+                  button.red(type='submit', name='send') Get a free quote
+
+                
               div
               
-              
+                form(method='POST', action='javascript:void(null);')
+                  .form
+             
+
+                      ul
+                        li
+                          .box__tab
+                            a.cruise.select(href='javascript:;') Cruise
+                            a.travelling(href='javascript:;') Flight
+
+
+                        li.email
+                          .block
+                            lable Email
+
+                            .form_input
+                              span.field
+                                input.mail(type='email', name='email', required='', value='', placeholder='Email')
+
+                        li.phone
+                          .block
+                            lable Phone Number
+
+                            .form_input
+                              span.field
+                                input.phone(type='text', name='phone', required='', value='', placeholder='Add phone number')
+
+                        li.name
+                          .block
+                            lable Name
+
+                            .form_input
+                              span.field
+                                input.phone(type='text', name='phone', required='', value='', placeholder='Add phone number')
+
+
+                        hr
+
+
+                        li.destination
+                          .block
+                            lable Destination
+
+                            .form_input
+                              span.field
+                                input(type='text', name='destination', required='', value='', placeholder='Add destination')
+
+
+
+                        li.sel_50.port
+                          .block
+                            lable Departure Port
+
+                            .form_input
+                              span.field
+                                input(type='text', name='destination', required='', value='', placeholder='Add departure port')
+                        li.data
+                          .block
+                            lable Departure date
+
+                            .form_input
+                              span.field
+                                input(type='date', name='data', required='', value='', placeholder='Add data')
+
+                  button.red(type='submit', name='send') Get a free quote
               
 
 

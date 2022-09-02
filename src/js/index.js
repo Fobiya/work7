@@ -1,7 +1,7 @@
 // JS import all in JS
 //import './jquery.min.js';
 
-//import './send.js';
+import './send.js';
 //import './send.js';
 
 

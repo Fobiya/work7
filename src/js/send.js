@@ -6,6 +6,8 @@ define(["jquery"], function($) {
   
   $(function () {
       $("[name=send]").click(function () {
+        
+//          $(":input.error").parent().parent().parent().parent().removeClass('error');
 
           $(":input.error").removeClass('error');
 //          $(":select.error").removeClass('error');
@@ -27,6 +29,7 @@ define(["jquery"], function($) {
                   $(this).addClass('error').parent('.field') /*.append('<span class="allert">Fill this field</span>') */;
                   error = 1;
                   $(":input.error:first");
+//                  $(this).parent().parent().parent().parent().addClass('error');
                   return;
               } else {
                   var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
@@ -36,6 +39,7 @@ define(["jquery"], function($) {
                           $(this).addClass('error').parent('.field') /*.append('<span class="allert">Enter a valid e-mail</span>') */;
                           error = 1;
                           $(":input.error:first");
+                        
                       }
                   }
                   var patterntel = /^()[0-9]{9,18}/i;
@@ -65,7 +69,7 @@ define(["jquery"], function($) {
 
                       $.ajax({
                           type: 'POST',
-                          url: 'https://idealstroy.od.ua/send.php',
+                          url: 'send.php',
                         
               
                           data: msg,

@@ -849,25 +849,25 @@ for(let img of document.querySelectorAll('img.bottom__cor')){
 //      return '<span class="dot"></span>';
 //    },
       
-//        responsive: [{
-//            breakpoint: 1250,
-//            settings: {
-//                arrows: false,
-//                slidesToShow: 2,
-//                slidesToScroll: 1,
-//                infinite: true,
-//            }
-//          },
-//          {
-//            breakpoint: 670,
-//            settings: {
-//                arrows: false,
-//                slidesToShow: 1,
-//                slidesToScroll: 1,
-//                infinite: true,
-//            }
-//          }                     
-//        ]
+        responsive: [{
+            breakpoint: 1250,
+            settings: {
+                arrows: false,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+            }
+          },
+          {
+            breakpoint: 900,
+            settings: {
+                arrows: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+            }
+          }                     
+        ]
     });
   
 
