@@ -25,7 +25,7 @@ html(lang='en')
     meta(name='description', conten= '' + description + '' )
     meta(name='keywords'  conten= '' + keywords + '' )
 
-  body.info(data-img='img/11.png')
+  body.info(data-img='img/12.png')
 
     
     .scroll__menu.none
@@ -94,18 +94,17 @@ html(lang='en')
             
             
             .tab__form
-              div.active
 
+              div.active
                 form(method='POST', action='javascript:void(null);')
                   .form
-                    a.challenge(href='javascript:;')
-                      img(data-src='img/challenge.svg', alt='challenge')
+
 
                       ul
                         li
                           .box__tab
-                            a.cruise.select(href='javascript:;') Cruise
-                            a.travelling(href='javascript:;') Flight
+                            a.cruise.select(href='javascript:;' data-tab='1') Cruise
+                            a.travelling(href='javascript:;' data-tab='2') Flight
 
 
                         li.email
@@ -173,8 +172,8 @@ html(lang='en')
                       ul
                         li
                           .box__tab
-                            a.cruise.select(href='javascript:;') Cruise
-                            a.travelling(href='javascript:;') Flight
+                            a.cruise.select(href='javascript:;' data-tab='1') Cruise
+                            a.travelling(href='javascript:;' data-tab='2') Flight
 
 
                         li.email
@@ -233,8 +232,8 @@ html(lang='en')
                   button.red(type='submit', name='send') Get a free quote
               
 
-
-
+              a.challenge(href='javascript:;')
+                img(data-src='img/challenge.svg', alt='challenge')
               
       .container
         .row
@@ -274,120 +273,139 @@ html(lang='en')
         .col.m12.s12.l12.xl12
           .testimonials
             div
-              .box__testimonials
-                .box__top
-                  .box__img
-                    img(data-src='img/section__2_user.png', alt='challenge')
-                    
-                  .box__content
-                    h3.title__ Jennifer P.
-                    ul.list
-                      li
-                        span.austin Austin – New York
-                      li
-                        span.business Business
-                      li
-                        span.top Top American First Class Airline
-                      li
-                        span.time 07.11.22
+              .box__padding
+                .box__testimonials
+                  .box__top
+                    .box__img
+                      img(data-src='img/section__2_user.png', alt='challenge')
 
-                .box__bottom 
-                  p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
+                    .box__content
+                      h3.title__ Jennifer P.
+                      ul.list
+                        li
+                          span.austin Austin – New York
+                        li
+                          span.business Business
+                        li
+                          span.top Top American First Class Airline
+                        li
+                          span.time 07.11.22
+
+                  .box__bottom 
+                    p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
             div
-              .box__testimonials
-                .box__top
-                  .box__img
-                    img(data-src='img/section__2_user.png', alt='challenge')
-                  .box__content
-                    h3.title__ Jennifer P.
-                    ul.list
-                      li
-                        span.austin Austin – New York
-                      li
-                        span.business Business
-                      li
-                        span.top Top American First Class Airline
-                      li
-                        span.time 07.11.22
+              .box__padding
+                .box__testimonials
+                  .box__top
+                    .box__img
+                      img(data-src='img/section__2_user.png', alt='challenge')
 
-                .box__bottom 
-                  p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
+                    .box__content
+                      h3.title__ Jennifer P.
+                      ul.list
+                        li
+                          span.austin Austin – New York
+                        li
+                          span.business Business
+                        li
+                          span.top Top American First Class Airline
+                        li
+                          span.time 07.11.22
+
+                  .box__bottom 
+                    p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
             div
-              .box__testimonials
-                .box__top
-                  .box__img
-                    img(data-src='img/section__2_user.png', alt='challenge')
-                  .box__content
-                    h3.title__ Jennifer P.
-                    ul.list
-                      li
-                        span.austin Austin – New York
-                      li
-                        span.business Business
-                      li
-                        span.top Top American First Class Airline
-                      li
-                        span.time 07.11.22
+              .box__padding
+                .box__testimonials
+                  .box__top
+                    .box__img
+                      img(data-src='img/section__2_user.png', alt='challenge')
 
-                .box__bottom 
-                  p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
+                    .box__content
+                      h3.title__ Jennifer P.
+                      ul.list
+                        li
+                          span.austin Austin – New York
+                        li
+                          span.business Business
+                        li
+                          span.top Top American First Class Airline
+                        li
+                          span.time 07.11.22
+
+                  .box__bottom 
+                    p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
             div
-              .box__testimonials
-                .box__top
-                  .box__img
-                    img(data-src='img/section__2_user.png', alt='challenge')
-                  .box__content
-                    h3.title__ Jennifer P.
-                    ul.list
-                      li
-                        span.austin Austin – New York
-                      li
-                        span.business Business
-                      li
-                        span.top Top American First Class Airline
-                      li
-                        span.time 07.11.22
+              .box__padding
+                .box__testimonials
+                  .box__top
+                    .box__img
+                      img(data-src='img/section__2_user.png', alt='challenge')
 
-                .box__bottom 
-                  p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
+                    .box__content
+                      h3.title__ Jennifer P.
+                      ul.list
+                        li
+                          span.austin Austin – New York
+                        li
+                          span.business Business
+                        li
+                          span.top Top American First Class Airline
+                        li
+                          span.time 07.11.22
+
+                  .box__bottom 
+                    p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
             div
-              .box__testimonials
-                .box__top
-                  .box__img
-                    img(data-src='img/section__2_user.png', alt='challenge')
-                  .box__content
-                    h3.title__ Jennifer P.
-                    ul.list
-                      li
-                        span.austin Austin – New York
-                      li
-                        span.business Business
-                      li
-                        span.top Top American First Class Airline
-                      li
-                        span.time 07.11.22
+              .box__padding
+                .box__testimonials
+                  .box__top
+                    .box__img
+                      img(data-src='img/section__2_user.png', alt='challenge')
 
-                .box__bottom 
-                  p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
+                    .box__content
+                      h3.title__ Jennifer P.
+                      ul.list
+                        li
+                          span.austin Austin – New York
+                        li
+                          span.business Business
+                        li
+                          span.top Top American First Class Airline
+                        li
+                          span.time 07.11.22
+
+                  .box__bottom 
+                    p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
             div
-              .box__testimonials
-                .box__top
-                  .box__img
-                    img(data-src='img/section__2_user.png', alt='challenge')
-                  .box__content
-                    h3.title__ Jennifer P.
-                    ul.list
-                      li
-                        span.austin Austin – New York
-                      li
-                        span.business Business
-                      li
-                        span.top Top American First Class Airline
-                      li
-                        span.time 07.11.22
+              .box__padding
+                .box__testimonials
+                  .box__top
+                    .box__img
+                      img(data-src='img/section__2_user.png', alt='challenge')
 
-                .box__bottom 
-                  p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
+                    .box__content
+                      h3.title__ Jennifer P.
+                      ul.list
+                        li
+                          span.austin Austin – New York
+                        li
+                          span.business Business
+                        li
+                          span.top Top American First Class Airline
+                        li
+                          span.time 07.11.22
+
+                  .box__bottom 
+                    p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
+
+
+
+
+
+
+
+
 
 
           a.red__border(href='javascript:;') Show all Testimonials
@@ -655,10 +673,15 @@ html(lang='en')
     a.call.none(href='javascript:;')
       img(data-src='img/call.svg', alt='call')
                   
-    a.bot_modal.none(data-fancybox='', data-data-src='#modal-1', href='javascript:;') Open Modal 1
+    a.bot_modal(data-fancybox='', data-data-src='#modal-1', href='javascript:;') Open Modal 1
     // //// MODAL ////
     #modal-1.modal__style.modal(style='display: none;')
+    
       .content_modal
+      
+      
+      Price Challenge
+      
         h3 title
 
         form(method='POST', action='javascript:void(null);')
@@ -701,8 +724,8 @@ html(lang='en')
 
 
 
-    script(data-src='https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js')
-    script(data-src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
     script.
       // console.log('index.pug');
 

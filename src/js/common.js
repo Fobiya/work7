@@ -7,8 +7,16 @@ define(["jquery"], function($) {
 
 
     $('.section__1 .box__tab>a').click(function(){
+      
+            var $info = $(this).data('tab');
+      
        $('.section__1 .box__tab>a').removeClass('select');
-       $(this).addClass('select');
+       $('.section__1 .box__tab>a:nth-child(' + $info + ')').addClass('select');
+      
+      $('.section__1 .tab__form>div').removeClass('active');
+       $('.section__1 .tab__form>div:nth-child(' + $info + ')').addClass('active');
+      
+      
     });
 
   
@@ -17,7 +25,7 @@ define(["jquery"], function($) {
    $('.section__4 .tab__bot>a').click(function(){
 
        $('.section__4 .tab__bot>a').removeClass('active');
-       $(this).addClass('active');
+       $(this).toggleClass('active');
      
      
       var num = $(this).data('num');
@@ -849,22 +857,53 @@ for(let img of document.querySelectorAll('img.bottom__cor')){
 //      return '<span class="dot"></span>';
 //    },
       
+      
         responsive: [{
-            breakpoint: 1250,
+            breakpoint: 2250,
+            settings: {
+                arrows: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                centerPadding: '120px',
+            }
+          },{
+            breakpoint: 2150,
             settings: {
                 arrows: false,
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 infinite: true,
+                centerPadding: '120px',
             }
-          },
-          {
-            breakpoint: 900,
+          },{
+            breakpoint: 1550,
+            settings: {
+                arrows: false,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                centerPadding: '120px',
+            }
+          },{
+            breakpoint: 1250,
             settings: {
                 arrows: false,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 infinite: true,
+                       centerPadding:  '80px',
+                
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+                arrows: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                        centerPadding: '0px',
             }
           }                     
         ]

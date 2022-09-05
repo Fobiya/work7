@@ -878,7 +878,7 @@ border-radius: 12px;
 
  section.section__1{
     
-//      background: #F5F8FC url(../img/section__1_back.png) no-repeat  top center/contain;
+      background: #F5F8FC url(../img/section__1_back.png) no-repeat  top center/contain;
 
      @include wid(1500) {  background: #F5F8FC url(../img/section__1_back_3840.png) no-repeat  top center !important;  }
    
@@ -1125,6 +1125,9 @@ border-radius: 12px;
        padding: 0;
        
        height: 1px;
+       
+       @include wid(991)  { display: none; } 
+       @include wid(992-1199)  { display: none; } 
 
      }
    
@@ -1164,21 +1167,7 @@ border-radius: 12px;
        }
        
        
-       
-       .challenge{
-         
-         position: absolute;
-         
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         
-          top: -53px;
-          right: -120px;
-         
-         z-index: 3;
 
-       }
        
        margin: 54px auto 16px;
 
@@ -1218,6 +1207,11 @@ border-radius: 12px;
            
             border-right: 1px solid #E9F0FB;
            
+           
+           &:nth-child(1){
+             justify-content: flex-start !important;
+           }
+           
            &:nth-child(4),&:nth-child(8){
                  border-right: 1px solid  transparent !important;
              
@@ -1234,6 +1228,15 @@ border-radius: 12px;
              
 
             }
+           
+           @include wid(601-991)  { 
+             
+               &:nth-child(2n){
+                 
+                 border-right: 1px solid  transparent !important;
+             }
+             
+           }
    
            
            display: flex;
@@ -1245,7 +1248,13 @@ border-radius: 12px;
       
            
            
-             width: 25%;
+      @include wid(1200){  width: 25%; }
+           
+@include wid(992-1199)  { width: 50%;  }
+@include wid(601-991)   { width: 50%;  }
+@include wid(600)       { width: 50%;  }
+           
+           
              border-radius: 0px;
            
            
@@ -1536,6 +1545,25 @@ border-radius: 12px;
    
    
    .tab__form{
+     position: relative;
+     display: block;
+     
+       
+       .challenge{
+         
+         position: absolute;
+         
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         
+          top: -53px;
+          right: -25px;
+         
+         z-index: 3;
+
+       }
+     
      
      &>div{
        display: none;
@@ -1666,6 +1694,7 @@ border-radius: 12px;
 //      background: #F5F8FC ;
       background: #F5F8FC url(../img/section__2_back.png) no-repeat  top 300px center/cover;
    
+   
       overflow: hidden;
       position: relative;
 
@@ -1754,6 +1783,11 @@ border-radius: 12px;
    }
    
    
+   .box__padding{
+     padding: 0 18px;
+   }
+   
+   
    .box__testimonials{
       width: 100%;
       max-width: 777px;
@@ -1771,6 +1805,7 @@ border-radius: 12px;
         @extend %bef-aft;
 
         background: url(../img/section__2_border.png) no-repeat;
+         background-size: contain;
         z-index: -1;
         position: absolute;
         height: 197px;
@@ -2078,6 +2113,8 @@ box-shadow: 0px 10px 34px rgba(55, 117, 209, 0.08);
        }
        
      }
+     
+     margin-bottom: 24px;
      
    }
    
@@ -2555,7 +2592,12 @@ box-shadow: 0px 0px 44px rgba(55, 117, 209, 0.1);
       background: #FFFFFF;
       border-radius: 24px;
      
-       padding: 40px;
+    
+     
+@include wid(992)      {    padding: 40px; }
+@include wid(601-991)  {    padding: 34px 20px; }
+@include wid(600)      {  padding:  24px 16px; }
+     
      
      .tab_n{
        display: none;
@@ -2577,7 +2619,11 @@ box-shadow: 0px 0px 44px rgba(55, 117, 209, 0.1);
                padding: 0 24px;
 
              color: #263954;
-             font: 700 24px/1.2em var(--p);
+           
+            
+      @include wid(992)      {     font: 700 24px/1.2em var(--p); }
+      @include wid(601-991)  {    font: 700 20px/1.2em var(--p); }
+      @include wid(600)      {   font: 700 16px/1.2em var(--p); }            
 
              display: flex;
              justify-content: space-between;
