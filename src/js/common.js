@@ -40,8 +40,8 @@ define(["jquery"], function($) {
   
      $('.section__4 .tab__content .list li a').click(function(){
 
-       $('.section__4 .tab__content .list li').removeClass('open');
-       $(this).parent().addClass('open');
+//       $('.section__4 .tab__content .list li').removeClass('open');
+       $(this).parent().toggleClass('open');
     });
   
   
@@ -310,7 +310,7 @@ for(let img of document.querySelectorAll('img.bottom__cor')){
   
   
   
-  for(let div of document.querySelectorAll('section ul.brand')){
+  for(let div of document.querySelectorAll('section div.brand')){
 
   new cssClassTogglerScroll({
     element: div,
@@ -909,6 +909,49 @@ for(let img of document.querySelectorAll('img.bottom__cor')){
         ]
     });
   
+  
+  
+//  $('a.next__2').click(function() { 
+//    $slick__.slick('slickNext');
+//  });
+// 
+//  $('a.prev__2').click(function() {
+//    $slick__.slick('slickPrev');
+//  });
+
+
+  
+  
+   $('.section__3 .brand').slick({
+        
+      
+        responsive: [{
+            breakpoint: 5000,
+            settings: "unslick"
+          },
+          {
+            breakpoint: 991,
+            settings: {
+               
+ 
+                arrows: false,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                         dots: true,
+            }
+          }                     
+        ]
+    });
+  
+  
+
+  $(window).resize(function () {
+    $('.section__3 .brand').not('.slick-initialized').slick('resize');
+});
+
+$(window).on('orientationchange', function () {
+    $('.section__3 .brand').not('.slick-initialized').slick('resize');
+});
 
 
 // =========================================================== 
