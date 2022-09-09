@@ -2548,9 +2548,9 @@ position: absolute;
       overflow: hidden;
       position: relative;
 
-      @include wid(992)      { padding: 100px 0 35px }
-      @include wid(601-991)  { padding: 176px  0  160px 0; }
-      @include wid(600)      { padding: 176px 0  160px 0; }
+      @include wid(992)      { padding: 100px 0 235px }
+      @include wid(601-991)  { padding: 176px  0  360px 0; }
+      @include wid(600)      { padding: 176px 0  360px 0; }
    
 
    &>.container:nth-child(1){
@@ -2564,7 +2564,7 @@ position: absolute;
          &>div:nth-child(1){
            
             .box__{
-              &:before{
+              .title__:before{
                 background: #FFC93F;
 
               }
@@ -2574,7 +2574,7 @@ position: absolute;
          &>div:nth-child(2){
            
             .box__{
-              &:before{
+              .title__:before{
                 background: #FF666B;
 
               }
@@ -2585,7 +2585,7 @@ position: absolute;
          &>div:nth-child(3){
            
             .box__{
-              &:before{
+              .title__:before{
                 background: #14CDCD;
 
               }
@@ -2596,7 +2596,7 @@ position: absolute;
          &>div:nth-child(4){
            
             .box__{
-              &:before{
+              .title__:before{
                 background: #FFC93F;
 
               }
@@ -2606,7 +2606,7 @@ position: absolute;
          &>div:nth-child(5){
            
             .box__{
-              &:before{
+              .title__:before{
                 background: #FF666B;
 
               }
@@ -2617,7 +2617,7 @@ position: absolute;
          &>div:nth-child(6){
            
             .box__{
-              &:before{
+              .title__:before{
                 background: #14CDCD;
 
               }
@@ -2628,7 +2628,7 @@ position: absolute;
          &>div{
              counter-increment: list1;
            .box__{
-            &:before{
+            .title__:before{
               @extend %bef-aft;
               
                content: counter(list1);
@@ -2671,6 +2671,8 @@ position: absolute;
      }
    
    &>.container:nth-child(2){
+     
+     background: url(../img/box__cont2.png) no-repeat top center/cover;
           
           
           .fish.right{
@@ -2804,6 +2806,88 @@ position: absolute;
              
      }
      
+     
+     
+     
+     &:after{
+          
+         @extend %bef-aft;
+          
+          
+@include wid(992)      { 
+          
+          background: #62c7ea;
+          width:  32px;
+          height: 70px;
+          position: absolute;
+    
+            top: 0;
+            left: 0;
+            bottom: 0;
+  
+          border-radius:  0  36px 36px 0;
+          margin: auto 0 ;
+  
+  
+          }
+@include wid(991)  { 
+          
+          
+               background: #62c7ea;
+          width:  23px;
+          height: 42px;
+          position: absolute;
+  
+          top: 0;
+          left: 0;
+          bottom: 0;
+  
+   border-radius:  0 21px 21px 0 ;
+                 margin: auto 0 ;
+          
+          }
+
+     }
+          
+     &:before{
+          
+         @extend %bef-aft;
+          
+          
+@include wid(992)      { 
+          
+          background: #62c7ea;
+          width:  32px;
+          height: 70px;
+          position: absolute;
+    
+            top: 0;
+            right: 0;
+            bottom: 0;
+  
+          border-radius:   36px 0 0  36px;
+          margin: auto 0 ;
+  
+  
+          }
+@include wid(991)  { 
+          
+          
+               background: #62c7ea;
+          width:  23px;
+          height: 42px;
+          position: absolute;
+  
+          top: 0;
+          right: 0;
+          bottom: 0;
+  
+   border-radius:   21px 0 0 21px ;
+                 margin: auto 0 ;
+          
+          }
+
+     }
      
      
      
@@ -2968,6 +3052,50 @@ position: absolute;
        
      }
    }
+   
+   
+  &:before{
+    @extend %bef-aft;
+
+  @include wid(992)      {
+
+    background: url(../img/section__3_bottom.svg) no-repeat center bottom;
+    background-size: contain;
+    width: 100%;
+    height: -webkit-fill-available;
+    position: absolute;
+    bottom: 0;
+    
+    }
+    
+       @include wid(601-991)  {
+         
+      background: url(../img/section__3_bottom_600.svg) no-repeat center bottom;
+    background-size: contain;
+    width: 100%;
+    height: -webkit-fill-available;
+    position: absolute;
+    bottom: 0;       
+         
+    }
+    
+    
+          @include wid(600)      { 
+    
+    
+    background: url(../img/section__3_bottom_600.svg) no-repeat center bottom;
+    background-size: contain;
+    width: 100%;
+    height: -webkit-fill-available;
+    position: absolute;
+    bottom: 0;
+    
+    
+    
+    }
+
+    
+  }
 
    
    
