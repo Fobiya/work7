@@ -327,6 +327,26 @@ for(let img of document.querySelectorAll('img.bottom__cor')){
 }
   
   
+  
+  
+for(let div of document.querySelectorAll('footer>div')){
+
+  new cssClassTogglerScroll({
+    element: div,
+    cssClass: 'act__',
+    threshold: 0.1,
+    onVisible: () => {
+
+    },
+    onHidden: () => {
+//      console.log('section__products active');
+    }
+  });
+
+}
+  
+  
+  
 // =========================================================== 
 // END cssClassTogglerScroll
 // =========================================================== 
