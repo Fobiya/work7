@@ -5,19 +5,23 @@ define(["jquery"], function($) {
 //  $('header').addClass('open');
   
 
-
-    $('.section__1 .box__tab>a').click(function(){
-      
-            var $info = $(this).data('tab');
-      
-       $('.section__1 .box__tab>a').removeClass('select');
-       $('.section__1 .box__tab>a:nth-child(' + $info + ')').addClass('select');
-      
-      $('.section__1 .tab__form>div').removeClass('active');
-       $('.section__1 .tab__form>div:nth-child(' + $info + ')').addClass('active');
-      
-      
+  
+    $('.cookie').click(function(){
+      $('#cookie').remove();
     });
+  
+//    $('.section__1 .box__tab>a').click(function(){
+//      
+//            var $info = $(this).data('tab');
+//      
+//       $('.section__1 .box__tab>a').removeClass('select');
+//       $('.section__1 .box__tab>a:nth-child(' + $info + ')').addClass('select');
+//      
+//      $('.section__1 .tab__form>div').removeClass('active');
+//       $('.section__1 .tab__form>div:nth-child(' + $info + ')').addClass('active');
+//      
+//      
+//    });
 
   
   
@@ -1304,18 +1308,18 @@ $(window).on('orientationchange', function () {
 
 
 
-function initlazyimg() {
-    var scripts = document.getElementsByTagName('script');
-    var section = scripts[scripts.length-1].parentNode;
-    var images = section.getElementsByTagName('img');
-    for (var i = 0; i < images.length; i++) {
-        var datasrc = images[i].getAttribute('data-src');
-        var src = document.createAttribute('src');
-        src.value = datasrc;
-        images[i].setAttributeNode(src);
-        images[i].removeAttribute('datasrc');
-    }
-}
+//function initlazyimg() {
+//    var scripts = document.getElementsByTagName('script');
+//    var section = scripts[scripts.length-1].parentNode;
+//    var images = section.getElementsByTagName('img');
+//    for (var i = 0; i < images.length; i++) {
+//        var datasrc = images[i].getAttribute('data-src');
+//        var src = document.createAttribute('src');
+//        src.value = datasrc;
+//        images[i].setAttributeNode(src);
+//        images[i].removeAttribute('datasrc');
+//    }
+//}
 //
 //  
 //  function source() {
@@ -1331,5 +1335,5 @@ function initlazyimg() {
 //    }
 //}
 
-  initlazyimg();
+//  initlazyimg();
 //  source();

@@ -35,7 +35,7 @@ html(lang='en')
     .right__menu
       .bock__top
         a.close(href='javascript:;')
-          img.logo__img(data-src='img/close.svg', alt='logo_black')
+          img.logo__img(src='img/close.svg', alt='logo_black')
       ul.menu__
         li
           a(href='javascript:;') Recently Added
@@ -54,7 +54,7 @@ html(lang='en')
         .row
           .col.m12.s12.l12.xl12
             a.logo(href='javascript:;')
-              img.logo__img(data-src='img/logo.svg', alt='logo_black')
+              img.logo__img(src='img/logo.svg', alt='logo_black')
               
             .menu
               ul
@@ -74,192 +74,115 @@ html(lang='en')
             a.tel(href='javascript:;') 1-800-xxx-xxxx
             
             a.call__mob(href='javascript:;')
-              img.call__(data-src='img/call__mob.png', alt='logo_black')
+              img.call__(src='img/call__mob.png', alt='logo_black')
               | Free Call Back
 
-          
+    
     section.section__1
       .container
         .row
           .col.m12.s12.l12.xl12
-            .image__left
-              img(data-src='img/section__1_ship.svg', alt='challenge')
-              
-            .image__right
-              img(data-src='img/section__1_plane.svg', alt='challenge')
 
-              
-          
             h1.title Book Your Favorite Destination <br>and get up to 70% Off!
             p.sub We have helped over 17,849 clients book their dream Vacation.
-            
+            .box__cont__img
+              img.image__left(src='img/section__1_ship.svg', alt='challenge')
+              img.image__right(src='img/section__1_plane.svg', alt='challenge')
             
             .tab__form
-
-              div.active
-                form(method='POST', action='javascript:void(null);')
-                  .form
-
-
-                      ul
-                        li
-                          .box__tab
-                            a.cruise.select(href='javascript:;' data-tab='1') Cruise
-                            a.travelling(href='javascript:;' data-tab='2') Flight
+              form(method='POST', action='javascript:void(null);')
+                .form
+                  ul
+                    li
+                      .box__tab
+                        a.cruise.select(href='javascript:;' data-tab='1') Cruise
+                        a.travelling(href='javascript:;' data-tab='2') Flight
 
 
-                        li.email
-                          .block
-                            lable Email
+                    li.email
+                      .block
+                        lable Email
 
-                            .form_input
-                              span.field
-                                input.mail(type='email', name='email', required='', value='', placeholder='Email')
+                        .form_input
+                          span.field
+                            input.mail(type='email', name='email', required='', value='', placeholder='Email')
 
-                        li.phone
-                          .block
-                            lable Phone Number
+                    li.phone
+                      .block
+                        lable Phone Number
 
-                            .form_input
-                              span.field
-                                input.phone(type='text', name='phone', required='', value='', placeholder='Add phone number')
+                        .form_input
+                          span.field
+                            input.phone(type='text', name='phone', required='', value='', placeholder='Add phone number')
 
-                        li.name
-                          .block
-                            lable Name
+                    li.name
+                      .block
+                        lable Name
 
-                            .form_input
-                              span.field
-                                input.phone(type='text', name='phone', required='', value='', placeholder='Add phone number')
+                        .form_input
+                          span.field
+                            input.phone(type='text', name='phone', required='', value='', placeholder='Add phone number')
+
+                    hr
 
 
-                        hr
+                    li.destination
+                      .block
+                        lable Destination
 
-
-                        li.destination
-                          .block
-                            lable Destination
-
-                            .form_input
-                              span.field
-                                input(type='text', name='destination', required='', value='', placeholder='Add destination')
+                        .form_input
+                          span.field
+                            input(type='text', name='destination', required='', value='', placeholder='Add destination')
 
 
 
-                        li.sel_50.port
-                          .block
-                            lable Departure Port
+                    li.sel_50.port
+                      .block
+                        lable Departure Port
 
-                            .form_input
-                              span.field
-                                input(type='text', name='destination', required='', value='', placeholder='Add departure port')
-                        li.data
-                          .block
-                            lable Departure date
+                        .form_input
+                          span.field
+                            input(type='text', name='destination', required='', value='', placeholder='Add departure port')
+                    li.data
+                      .block
+                        lable Departure date
 
-                            .form_input
-                              span.field
-                                input(type='date', name='data', required='', value='', placeholder='Add data')
+                        .form_input
+                          span.field
+                            input(type='date', name='data', required='', value='', placeholder='Add data')
 
-                  button.red(type='submit', name='send') Get a free quote
+                button.red(type='submit', name='send') Get a free quote
 
-                
-              div
-              
-                form(method='POST', action='javascript:void(null);')
-                  .form
-             
-
-                      ul
-                        li
-                          .box__tab
-                            a.cruise.select(href='javascript:;' data-tab='1') Cruise
-                            a.travelling(href='javascript:;' data-tab='2') Flight
-
-
-                        li.email
-                          .block
-                            lable Email
-
-                            .form_input
-                              span.field
-                                input.mail(type='email', name='email', required='', value='', placeholder='Email')
-
-                        li.phone
-                          .block
-                            lable Phone Number
-
-                            .form_input
-                              span.field
-                                input.phone(type='text', name='phone', required='', value='', placeholder='Add phone number')
-
-                        li.name
-                          .block
-                            lable Name
-
-                            .form_input
-                              span.field
-                                input.phone(type='text', name='phone', required='', value='', placeholder='Add phone number')
-
-
-                        hr
-
-
-                        li.destination
-                          .block
-                            lable Destination
-
-                            .form_input
-                              span.field
-                                input(type='text', name='destination', required='', value='', placeholder='Add destination')
-
-
-
-                        li.sel_50.port
-                          .block
-                            lable Departure Port
-
-                            .form_input
-                              span.field
-                                input(type='text', name='destination', required='', value='', placeholder='Add departure port')
-                        li.data
-                          .block
-                            lable Departure date
-
-                            .form_input
-                              span.field
-                                input(type='date', name='data', required='', value='', placeholder='Add data')
-
-                  button.red(type='submit', name='send') Get a free quote
               
 
               a.challenge(href='javascript:;')
-                img(data-src='img/challenge.svg', alt='challenge')
+                img(src='img/challenge.svg', alt='challenge')
               
       .container
         .row
           .col.m12.s12.l12.xl12
             .image__left
-              img(data-src='img/section__1_parrot_2.svg', alt='challenge')
+              img(src='img/section__1_parrot_2.svg', alt='challenge')
               
             ul.brand
               li
-                img(data-src='img/logo__1.svg', alt='challenge')
+                img(src='img/logo__1.svg', alt='challenge')
               li
-                img(data-src='img/logo__2.svg', alt='challenge')
+                img(src='img/logo__2.svg', alt='challenge')
               li
-                img(data-src='img/logo__3.svg', alt='challenge')
+                img(src='img/logo__3.svg', alt='challenge')
               li
-                img(data-src='img/logo__4.svg', alt='challenge')
+                img(src='img/logo__4.svg', alt='challenge')
               li
-                img(data-src='img/logo__5.svg', alt='challenge')
+                img(src='img/logo__5.svg', alt='challenge')
               li
-                img(data-src='img/logo__6.svg', alt='challenge')
+                img(src='img/logo__6.svg', alt='challenge')
               li
-                img(data-src='img/logo__7.svg', alt='challenge')
+                img(src='img/logo__7.svg', alt='challenge')
                 
             .image__right
-              img(data-src='img/section__1_parrot_1.svg', alt='challenge')
+              img(src='img/section__1_parrot_1.svg', alt='challenge')
+
 
 
 
@@ -278,7 +201,7 @@ html(lang='en')
                 .box__testimonials
                   .box__top
                     .box__img
-                      img(data-src='img/section__2_user.png', alt='challenge')
+                      img(src='img/section__2_user.png', alt='challenge')
 
                     .box__content
                       h3.title__ Jennifer P.
@@ -299,7 +222,7 @@ html(lang='en')
                 .box__testimonials
                   .box__top
                     .box__img
-                      img(data-src='img/section__2_user.png', alt='challenge')
+                      img(src='img/section__2_user.png', alt='challenge')
 
                     .box__content
                       h3.title__ Jennifer P.
@@ -320,7 +243,7 @@ html(lang='en')
                 .box__testimonials
                   .box__top
                     .box__img
-                      img(data-src='img/section__2_user.png', alt='challenge')
+                      img(src='img/section__2_user.png', alt='challenge')
 
                     .box__content
                       h3.title__ Jennifer P.
@@ -341,7 +264,7 @@ html(lang='en')
                 .box__testimonials
                   .box__top
                     .box__img
-                      img(data-src='img/section__2_user.png', alt='challenge')
+                      img(src='img/section__2_user.png', alt='challenge')
 
                     .box__content
                       h3.title__ Jennifer P.
@@ -362,7 +285,7 @@ html(lang='en')
                 .box__testimonials
                   .box__top
                     .box__img
-                      img(data-src='img/section__2_user.png', alt='challenge')
+                      img(src='img/section__2_user.png', alt='challenge')
 
                     .box__content
                       h3.title__ Jennifer P.
@@ -383,7 +306,7 @@ html(lang='en')
                 .box__testimonials
                   .box__top
                     .box__img
-                      img(data-src='img/section__2_user.png', alt='challenge')
+                      img(src='img/section__2_user.png', alt='challenge')
 
                     .box__content
                       h3.title__ Jennifer P.
@@ -405,10 +328,10 @@ html(lang='en')
 
           
           .box__set
-            img.img_1(data-src='img/section__2_top_1.svg', alt='section__2_top_1')
-            img.img_2(data-src='img/section__2_top_2.svg', alt='section__2_top_1')
-            img.img_3(data-src='img/section__2_top_3.svg', alt='section__2_top_1')
-            img.img_4(data-src='img/section__2_top_4.svg', alt='section__2_top_1')
+            img.img_1(src='img/section__2_top_1.svg', alt='section__2_top_1')
+            img.img_2(src='img/section__2_top_2.svg', alt='section__2_top_1')
+            img.img_3(src='img/section__2_top_3.svg', alt='section__2_top_1')
+            img.img_4(src='img/section__2_top_4.svg', alt='section__2_top_1')
             
           
           
@@ -421,7 +344,7 @@ html(lang='en')
           .col.m12.s12.l4.xl4
             .box__book
               .box__img
-                img(data-src='img/book_1.png', alt='challenge')
+                img(src='img/book_1.png', alt='challenge')
               .box__content
                 h4.title__ Get secret deals and discounts
                 p We have the best Cruise & Flight deals in the world. If you find a cheaper price online, we'll beat it.
@@ -429,7 +352,7 @@ html(lang='en')
           .col.m12.s12.l4.xl4
             .box__book
               .box__img
-                img(data-src='img/book_2.png', alt='challenge')
+                img(src='img/book_2.png', alt='challenge')
               .box__content
                 h4.title__ Get secret deals and discounts
                 p We have the best Cruise & Flight deals in the world. If you find a cheaper price online, we'll beat it.
@@ -437,14 +360,14 @@ html(lang='en')
           .col.m12.s12.l4.xl4
             .box__book
               .box__img
-                img(data-src='img/book_3.png', alt='challenge')
+                img(src='img/book_3.png', alt='challenge')
               .box__content
                 h4.title__ Get secret deals and discounts
                 p We have the best Cruise & Flight deals in the world. If you find a cheaper price online, we'll beat it.
                 
               
           
-      img.bottom__cor(data-src='img/section__2_cor.svg', alt='challenge')
+      img.bottom__cor(src='img/section__2_cor.svg', alt='challenge')
           
           
           
@@ -452,7 +375,7 @@ html(lang='en')
       .container
         .row
           .col.m12.s12.l12.xl12
-            img.fish.right(data-src='img/fish.svg', alt='challenge')
+            img.fish.right(src='img/fish.svg', alt='challenge')
             h2.title How it works
             
         .row
@@ -474,7 +397,7 @@ html(lang='en')
         .container
           .row
             .col.m12.s12.l12.xl12
-              img.skat.left(data-src='img/skat-1.svg', alt='challenge')
+              img.skat.left(src='img/skat-1.svg', alt='challenge')
 
 
 
@@ -485,76 +408,76 @@ html(lang='en')
               .brand
                 div
                   .li
-                    img(data-src='img/brand__1.svg', alt='challenge')
+                    img(src='img/brand__1.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__2.svg', alt='challenge')
+                    img(src='img/brand__2.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__3.svg', alt='challenge')
+                    img(src='img/brand__3.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__4.svg', alt='challenge')
+                    img(src='img/brand__4.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__5.svg', alt='challenge')
+                    img(src='img/brand__5.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__6.svg', alt='challenge')
+                    img(src='img/brand__6.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__7.svg', alt='challenge')
+                    img(src='img/brand__7.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__8.svg', alt='challenge')
+                    img(src='img/brand__8.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__9.svg', alt='challenge')
+                    img(src='img/brand__9.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__10.svg', alt='challenge')
+                    img(src='img/brand__10.svg', alt='challenge')
 
 
               h3.title__line Our partner airlines
 
 
-              img.fish.right(data-src='img/fish.svg', alt='challenge')
+              img.fish.right(src='img/fish.svg', alt='challenge')
 
-              img.fish.left(data-src='img/fish-left.svg', alt='challenge')
+              img.fish.left(src='img/fish-left.svg', alt='challenge')
 
-              img.fish.left.bottom(data-src='img/fish-left.svg', alt='challenge')
+              img.fish.left.bottom(src='img/fish-left.svg', alt='challenge')
 
               .brand
                 div
                   .li
-                    img(data-src='img/brand__11.svg', alt='challenge')
+                    img(src='img/brand__11.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__12.svg', alt='challenge')
+                    img(src='img/brand__12.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__13.svg', alt='challenge')
+                    img(src='img/brand__13.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__14.svg', alt='challenge')
+                    img(src='img/brand__14.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__15.svg', alt='challenge')
+                    img(src='img/brand__15.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__16.svg', alt='challenge')
+                    img(src='img/brand__16.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__17.svg', alt='challenge')
+                    img(src='img/brand__17.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__18.svg', alt='challenge')
+                    img(src='img/brand__18.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__19.svg', alt='challenge')
+                    img(src='img/brand__19.svg', alt='challenge')
                 div
                   .li
-                    img(data-src='img/brand__20.svg', alt='challenge')
+                    img(src='img/brand__20.svg', alt='challenge')
 
 
 
@@ -572,15 +495,15 @@ html(lang='en')
           
     section.section__4
       .box__pecypc.desctop__
-        img.img__1(data-src='img/pесурс.svg', alt='challenge')
-        img.img__2(data-src='img/pесурс.svg', alt='challenge')
-        img.img__3(data-src='img/pесурс.svg', alt='challenge')
-        img.img__4(data-src='img/pесурс.svg', alt='challenge')
-        img.img__5(data-src='img/pесурс.svg', alt='challenge')
+        img.img__1(src='img/pесурс.svg', alt='challenge')
+        img.img__2(src='img/pесурс.svg', alt='challenge')
+        img.img__3(src='img/pесурс.svg', alt='challenge')
+        img.img__4(src='img/pесурс.svg', alt='challenge')
+        img.img__5(src='img/pесурс.svg', alt='challenge')
       .box__pecypc.mob__
-        img.img__1(data-src='img/pесурс__mob.svg', alt='challenge')
-        img.img__2(data-src='img/pесурс__mob.svg', alt='challenge')
-        img.img__3(data-src='img/pесурс__mob.svg', alt='challenge')
+        img.img__1(src='img/pесурс__mob.svg', alt='challenge')
+        img.img__2(src='img/pесурс__mob.svg', alt='challenge')
+        img.img__3(src='img/pесурс__mob.svg', alt='challenge')
         
       .container
         .row
@@ -660,7 +583,7 @@ html(lang='en')
 
           .col.m12.s12.l6.xl7
             .box__img
-              img(data-src='img/section__5_frame.svg', alt='challenge')
+              img(src='img/section__5_frame.svg', alt='challenge')
             
             
 
@@ -671,7 +594,7 @@ html(lang='en')
         .row
           .col.m12.s12.l6.xl7
             .box__img
-              img(data-src='img/footer_ship.svg', alt='challenge')
+              img(src='img/footer_ship.svg', alt='challenge')
           
           .col.m12.s12.l6.xl5
           
@@ -700,25 +623,25 @@ html(lang='en')
         .container
           .row
             .col.m12.s12.l12.xl12
-              img.kit.left(data-src='img/kit2.svg', alt='challenge')
-              img.kit.right(data-src='img/kit1.svg', alt='challenge')
+              img.kit.left(src='img/kit2.svg', alt='challenge')
+              img.kit.right(src='img/kit1.svg', alt='challenge')
               
               .logo
-                img(data-src='img/logo-footer.svg', alt='challenge')
+                img(src='img/footer-logo.svg', alt='challenge')
           
                 
 
     a.call.none(href='javascript:;')
-      img(data-src='img/call.svg', alt='call')
+      img(src='img/call.svg', alt='call')
       
       
-    .cookie
+    #cookie.cookie.none
       a.close(href='javascript:;')
-        img(data-src='img/close.svg', alt='call')
+        img(src='img/close.svg', alt='call')
       .container
         .row
           .col.m12.s12.l12.xl12
-            img.img(data-src='img/cookies.svg', alt='call')
+            img.img(src='img/cookies.svg', alt='call')
             p This website uses cookies to ensure you get the best experience on our website.
               a.learn(href='javascript:;') Learn More
             a.red(href='javascript:;') Accept all
@@ -778,13 +701,13 @@ html(lang='en')
           
           
 
-    a.bot_modal.none(data-fancybox='', data-data-src='#modal-2', href='#modal-2') Open Modal 2
+    a.bot_modal.none(data-fancybox='', data-src='#modal-2', href='#modal-2') Open Modal 2
     // //// MODAL ////
     #modal-2.modal(style='display: none;')
       .content_modal.column.mod_2
         .box__img
-          img.desc(data-src='img/mod1.svg', alt='challenge')
-          img.mob(data-src='img/mod1_mob.svg', alt='challenge')
+          img.desc(src='img/mod1.svg', alt='challenge')
+          img.mob(src='img/mod1_mob.svg', alt='challenge')
           
           
         .box__content
@@ -812,13 +735,13 @@ html(lang='en')
             button.red(type='submit', name='send') Send
 
 
-    a.bot_modal.none(data-fancybox='', data-data-src='#thx', href='#thx') thx
+    a.bot_modal.none(data-fancybox='', data-src='#thx', href='#thx') thx
     // //// MODAL ////
     #thx.modal(style='display: none;')
       .content_modal.thx
         .box__img
-          img.desc(data-src='img/thx.svg', alt='challenge')
-          img.mob(data-src='img/thx_mob.svg', alt='challenge')
+          img.desc(src='img/thx.svg', alt='challenge')
+          img.mob(src='img/thx_mob.svg', alt='challenge')
           
         .box__content
           h2.title Thank you!

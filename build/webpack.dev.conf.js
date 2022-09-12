@@ -8,7 +8,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: baseWebpackConfig.externals.paths.dist,
-    port: 9040,
+    port: 9042,
     overlay: {
       warnings: true, 
       errors: true
