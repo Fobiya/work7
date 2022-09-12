@@ -931,9 +931,9 @@ border-radius: 12px;
   @include wid(1500) {  background: #F5F8FC url(../img/section__1_back_3840.png) no-repeat  top center !important;  }
 
   @include wid(1200-1499){  background: #F5F8FC url(../img/section__1_back_2440.png) no-repeat  top center;  }
-  @include wid(992-1199) {  background: #F5F8FC url(../img/section__1_back_1280.png) no-repeat  top center;  }
-  @include wid(601-991) {  background: #F5F8FC url(../img/section__1_back_1280.png) no-repeat  top center;  } 
-  @include wid(600)  {  background: #F5F8FC url(../img/section__1_back_1280.png) no-repeat  top center;  } 
+  @include wid(992-1199) {  background: #F5F8FC url(../img/section__1_back_1920.png) no-repeat  top center;  } 
+  @include wid(601-991) {  background: #F5F8FC url(../img/section__1_back_1920.png) no-repeat  top center;  } 
+  @include wid(600)  {   background: #F5F8FC url(../img/section__1_back_1920.png) no-repeat  top center;  } 
    
    
       overflow: hidden;
@@ -1315,21 +1315,25 @@ border-radius: 12px;
            
            padding-left: 35px;
            
-      
+            @include wid(400)       {            padding-left: 15px; }
            
            
       @include wid(1200){  width: 25%; }
-           
+//           
       @include wid(992-1199)  { width: 50%;  }
       @include wid(601-991)   { width: 50%;  }
-      @include wid(600)       { width: 50%;  }
+      @include wid(600)       { width: 100%;  }
            
            
              border-radius: 0px;
            
            
            &.sel_50{
-             width: 50%;
+          
+             
+             @include wid(992)  {     width: 50%; }
+            @include wid(601-991)  {     width: 50%; }
+             @include wid(600) { width: 100%; }
            }
            
            
