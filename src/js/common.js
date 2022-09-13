@@ -6,7 +6,10 @@ define(["jquery"], function($) {
   
 
   
-    $('.cookie').click(function(){
+  
+  
+  
+    $('.cookie>a.close').click(function(){
       $('#cookie').remove();
     });
   

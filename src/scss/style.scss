@@ -900,7 +900,7 @@ border-radius: 12px;
 
 .call{
   position: fixed;
-  bottom: 60px;
+  bottom: 110px;
   right: 205px;
   width: 132px;
   height: 132px;
@@ -930,16 +930,20 @@ border-radius: 12px;
 //
   @include wid(1500) {  background: #F5F8FC url(../img/section__1_back_3840.png) no-repeat  top center !important;  }
 
-  @include wid(1200-1499){  background: #F5F8FC url(../img/section__1_back_2440.png) no-repeat  top center;  }
+  @include wid(1200-1499){  background: #F5F8FC url(../img/section__1_back_1920.png) no-repeat  top center;  }
   @include wid(992-1199) {  background: #F5F8FC url(../img/section__1_back_1920.png) no-repeat  top center;  } 
   @include wid(601-991) {  background: #F5F8FC url(../img/section__1_back_1920.png) no-repeat  top center;  } 
-  @include wid(600)  {   background: #F5F8FC url(../img/section__1_back_1920.png) no-repeat  top center;  } 
+  @include wid(600)  {   background: #F5F8FC url(../img/section__1_back_700.png) no-repeat  top center; } 
    
    
       overflow: hidden;
       position: relative;
 
-      @include wid(992)      { padding: 230px 0 160px; }
+
+      @include wid(1500) { padding: 230px 0 160px; }
+      @include wid(1200-1499){ padding: 230px 0 160px; }
+      @include wid(992-1199) { padding: 130px 0 160px; }
+
       @include wid(601-991)  { padding: 150px 0  260px 0; }
       @include wid(600)      { padding: 85px 0  260px 0; }
    
@@ -950,15 +954,7 @@ border-radius: 12px;
    
    
    &.act__{
-     
-     &>div.container:nth-child(1){
-       
-                .image__left{
-       
-        animation: 3.3s slideLeft .3s infinite !important;
-       }
-       
-     }
+
      
      &>div.container:nth-child(1){
          
@@ -969,7 +965,7 @@ border-radius: 12px;
               transform: scale(1) rotate(0deg) translateY(0) translateX(0); 
              
       
-           
+            
            
          }
          
@@ -979,7 +975,7 @@ border-radius: 12px;
                   opacity: 1;
               transform: scale(1) rotate(0deg) translateY(0) translateX(0); 
          
-           
+               animation: 3.3s slideLeft 2.3s infinite ;
            
 
            
@@ -1084,9 +1080,11 @@ border-radius: 12px;
        left:0;
        top:0;
        
-
        
-@include wid(992)      {   width: 506px;  height: auto; position: absolute;  margin-top: 20px; margin-left: -115px; }
+  @include wid(1500) {    width: 506px;  height: auto; position: absolute;  margin-top: -180px; margin-left: -115px; }
+  @include wid(1200-1499){  width: 506px;  height: auto; position: absolute;  margin-top: -50px; margin-left: -15px; }
+  @include wid(992-1199) {   width: 506px;  height: auto; position: absolute;  margin-top: 20px; margin-left: -115px; }
+
 @include wid(601-991)  {   width: 306px;  height: auto; position: relative;  margin-top: 0; margin-left: 0; }
 @include wid(600)      {   width: 170px;  height: auto; position: relative;  margin-top: -100px; margin-left: 0;}
        
@@ -1114,9 +1112,12 @@ border-radius: 12px;
        
       
        
-@include wid(992)      {   width: 506px;  height: auto; position: absolute;   margin-top: -140px; margin-right: -145px; }
-@include wid(601-991)  {   width: 306px;  height: auto; position: relative;  margin-top: 0; margin-right: 0;  }
-@include wid(600)      {   width: 170px;  height: auto; position: relative; margin-top: -200px; margin-right: 0; }
+@include wid(1500)      {   width: 506px;  height: auto; position: absolute;   margin-top: -240px; margin-right: -145px; }
+@include wid(1200-1499)      {   width: 506px;  height: auto; position: absolute;   margin-top: -140px; margin-right: -45px; }
+@include wid(992-1199)    {   width: 506px;  height: auto; position: absolute;   margin-top: -140px; margin-right: -145px; }
+
+@include wid(601-991)  {   width: 306px;  height: auto; position: relative;  margin-top:  -250px; margin-right: 0;  }
+@include wid(600)      {   width: 170px;  height: auto; position: relative; margin-top: -250px; margin-right: 0; top:0px; }
        
        
         
@@ -1141,24 +1142,31 @@ border-radius: 12px;
    
    .box__cont__img{
      width: 100%;
+     position: relative;
+     z-index: 7;
      
-     @include wid(991)      {  margin-top: 45px; height: 200px;  display: flex; justify-content: space-between; }
-     
+     @include wid(1500)      {    }
+     @include wid(1200-1499)  {  margin-top: 45px; height: 200px;  display: flex; justify-content: space-between; }
+     @include wid(992-1199)     {  margin-top: 45px; height: 200px;  display: flex; justify-content: space-between; }
+ @include wid(601-991)  {  height: auto;       margin-top: 115px;   display: flex; justify-content: space-between;   margin-bottom: -70px; }
+     @include wid(600)      {    height: auto;    margin-top: 145px;      margin-bottom: -50px; display: flex; justify-content: space-between;   }
     
    }
-   
-   
-   
+
+  
    
      .title{
         color: #263954;
         letter-spacing: -.0025em;
+       z-index: 11;
        
        text-align: center; 
 
-        @include wid(992)      {  font: 900 56px/1.5em var(--p);      margin-bottom: 16px; }
-        @include wid(601-991)  {  font: 900 46px/1.5em var(--p);    margin-bottom: 10px; }
-        @include wid(600)      {  font: 900 30px/1.5em var(--p);    margin-bottom: 8px; }
+  
+        @include wid(1200)      {  font: 900 56px/1.5em var(--p);      margin-bottom: 16px; }
+        @include wid(992-1199)     {  font: 900 56px/1.5em var(--p);      margin-bottom: 16px; max-width: 690px; margin-left: auto; margin-right: auto; }
+        @include wid(601-991)  {  font: 900 46px/1.5em var(--p);    margin-bottom: 10px;  max-width: 690px; margin-left: auto; margin-right: auto; }
+        @include wid(600)      {  font: 900 30px/1.5em var(--p);    margin-bottom: 8px; max-width: 400px; margin-left: auto; margin-right: auto; }
      }
    
      p{
@@ -1167,7 +1175,7 @@ border-radius: 12px;
 
         @include wid(992)      {  font: 400 16px/1.3em var(--p); }
         @include wid(601-991)  {  font: 400 16px/1.3em var(--p); }
-        @include wid(600)      {  font: 400 16px/1.3em var(--p); }
+        @include wid(600)      {  font: 400 16px/1.3em var(--p);  }
      
      
        &.sub{
@@ -1176,7 +1184,7 @@ border-radius: 12px;
          
         @include wid(992)      {  font: 400 16px/1.3em var(--p); }
         @include wid(601-991)  {  font: 400 16px/1.3em var(--p); }
-        @include wid(600)      {  font: 400 16px/1.3em var(--p); }
+        @include wid(600)      {  font: 400 16px/1.3em var(--p); max-width: 380px; margin-left: auto; margin-right: auto; }
        }
      }
    
@@ -1649,7 +1657,7 @@ border-radius: 12px;
    .tab__form{
      position: relative;
      display: block;
-     z-index: 5;
+     z-index: 100;
      
        
        .challenge{
@@ -1664,6 +1672,14 @@ border-radius: 12px;
           right: -25px;
          
          z-index: 3;
+         
+         
+
+     @include wid(600)      {   right: 25px;     width: 170px;   top: -60px; }
+         
+            
+
+
 
        }
      
@@ -4593,6 +4609,62 @@ border-radius: 12px;
     
     
   }
+  
+  &.cookie_modal{
+    
+    background: #fff;
+    
+  .desc{
+        @include wid(601-991)  {   max-width:106px; }
+        @include wid(600)  {    max-width: 86px;   } 
+    }
+    
+
+    
+@include wid(992)  {     padding: 40px 30px;   }
+@include wid(601-991)  {     padding: 30px 20px;  }
+@include wid(600)  {     padding: 16px;  }
+    
+    
+    .title{
+
+      color: #263954;
+      font: 900 24px/1.5em var(--p); margin-bottom: 10px;
+      
+      
+      @include wid(992)  {  font: 900 24px/1.5em var(--p);  }
+@include wid(601-991)  { font: 900 20px/1.5em var(--p);  }
+@include wid(600)  {  font: 900 20px/1.5em var(--p);  }
+    }
+    
+    p{
+       
+      
+      color: #526278;
+     
+      @include wid(992)  {   font: 400 16px/1.2em var(--p);  }
+@include wid(601-991)  {  font: 400 15px/1.2em var(--p);  }
+@include wid(600)  {  font: 400 14px/1.2em var(--p);   }
+ 
+      
+    }
+    
+   .red{
+      width: 100%;
+      max-width: 326px;
+      max-height: 49px;
+      margin-left: auto;
+      margin-right: auto;
+     margin-top: 32px;
+      
+      @include wid(992)      { margin-top: 32px; }
+      @include wid(991)      { margin-top: 24px;   }
+    }
+    
+  }
+  
+  
+  
     
   
 
@@ -4983,25 +5055,41 @@ border-radius: 12px;
 
       padding: 16px 0;
       background: #fff;
+      
+              @include wid(601-991)  {  padding-right: 20px; }
+        @include wid(600)  {  padding-right: 30px; }
+        @include wid(500)  {  padding-right: 0px; }
 
       &>div.container>div.row:nth-child(1)>div:nth-child(1){
          display: flex;
         align-items: center;
          justify-items: center;
+        @include wid(600)  {   flex-wrap: wrap;     align-items: flex-start;  }
+        
       }
       
       .img{
         margin-right: 24px;
+        
+        @include wid(601-991)  {  width: 35px; }
+        @include wid(600)  {   width: 25px;  margin-right: 14px;  }
       }
       p{
         color: #263954;
-        font: 700 18px/1.2em var(--p);
+        
+
+   @include wid(992)  { font: 700 18px/1.2em var(--p);   }
+@include wid(601-991)  {  font: 700 16px/1.2em var(--p); }
+@include wid(600)  {  font: 700 12px/1.2em var(--p);  width: calc(100% - 50px);  padding-right: 30px;  }
         
         a{
           color: #E71D36;
-          font: 700 18px/1.2em var(--p);
+            margin: 0 24px;
+       @include wid(992)  { font: 700 18px/1.2em var(--p);   }
+@include wid(601-991)  {  font: 700 16px/1.2em var(--p);   margin: 0 20px; }
+@include wid(600)  {  font: 700 12px/1.2em var(--p); margin: 0; margin-top: 5px;  display: block; }
           
-          margin: 0 24px;
+        
           
           &:hover{
             text-decoration: underline;
@@ -5017,13 +5105,20 @@ border-radius: 12px;
       
       .red{
         max-width: 147px;
-        max-height: 49px;
+        max-height: 45px;
         border-radius: 8px;
         font: 700 14px/1.2em var(--p);
         margin-left: auto;
         
+         
+        @include wid(600)  { width: 100%;  max-width: 100%; margin-top: 16px;  }
+        
         
       }
+      
+      
+          @include wid(991){ height: auto; } 
+      
       
     }
 
