@@ -5,13 +5,32 @@ define(["jquery"], function($) {
 //  $('header').addClass('open');
   
 
+  if( !Cookies.get('koyap__cookie') ){
+       $('#cookie').removeClass('none');
+         $('.call').removeClass('bot');
+ 
+  }
   
+
   
+               $('.clocs').click(function(){
+                  $('#cookie').remove();
+                      Cookies.set('koyap__cookie', '1', { expires: 7 });
+                  $('.call').addClass('bot');
+                    
+                });
+                $('.cookie>a.close').click(function(){
+                  $('#cookie').remove();
+                       Cookies.set('koyap__cookie', '1', { expires: 7 });
+                       $('.call').addClass('bot');
+                });
+        
+               $('.cookie a.allclose').click(function(){
+                  $('#cookie').remove();
+                      Cookies.set('koyap__cookie', '1', { expires: 7 });
+                      $('.call').addClass('bot');
+               });
   
-  
-    $('.cookie>a.close').click(function(){
-      $('#cookie').remove();
-    });
   
 //    $('.section__1 .box__tab>a').click(function(){
 //      

@@ -620,14 +620,20 @@ html(lang='en')
               
               .logo
                 img(src='img/footer-logo.svg', alt='challenge')
+                
+                
+              .box__
+                a(data-fancybox='', data-src='#terms', href='#cookie_modal') Terms of Services
+                a(data-fancybox='', data-src='#policy', href='#policy') Privacy policy
           
                 
 
-    a.call.none(href='javascript:;')
+
+    a.call.bot(href='javascript:;')
       img(src='img/call.svg', alt='call')
-      
-      
-    #cookie.cookie
+
+
+    #cookie.cookie.none
       a.close(href='javascript:;')
         img(src='img/close.svg', alt='call')
       .container
@@ -637,7 +643,7 @@ html(lang='en')
             p This website uses cookies to ensure you get the best experience on our website.
               a.learn(data-fancybox='', data-src='#cookie_modal', href='#cookie_modal') Learn More
             a.red(href='javascript:;') Accept all
-            
+
 
               
                   
@@ -752,11 +758,39 @@ html(lang='en')
           h2.title Privacy Overview
           p This website uses cookies to improve your experience while you navigate through the website. Out of these, the cookies that are categorized as necessary are stored on your browser as they are essential for the working of basic functionalities of the website. We also use third-party cookies that help us analyze and understand how you use this website. These cookies will be stored in your browser only with your consent. You also have the option to opt-out of these cookies. But opting out of some of these cookies may affect your browsing experience.
 
-          a.red(href='javascript:;') Accept all
+          a.red(href='javascript:;' ) Accept all
+          
+          
+          
+
+    a.bot_modal.none(data-fancybox='', data-src='#policy', href='#policy') Privacy policy
+    // //// MODAL ////
+    #policy.modal(style='display: none;')
+      .content_modal.info__modal
+          
+        .box__content
+          h2.title Privacy policy
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+          a.red(href='javascript:;' data-fancybox-close) Back
+
+    a.bot_modal.none(data-fancybox='', data-src='#terms', href='#cookie_modal') Terms of Services
+    // //// MODAL ////
+    #terms.modal(style='display: none;')
+      .content_modal.info__modal
+
+        .box__content
+          h2.title Terms of Services
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+          a.red(href='javascript:;' data-fancybox-close) Back
 
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js')
     script.
       // console.log('index.pug');
 

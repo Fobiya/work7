@@ -121,9 +121,17 @@ letter-spacing: -.001em;
 @include wid(600)  {  font: 900 14px/1.2em var(--l); }
 
 
-@include wid(992)  {    }
-@include wid(601-991)  {   }
-@include wid(600)  {    }
+@include wid(992)        {  }
+@include wid(601-991)    {  }
+@include wid(600)        {  }
+
+
+
+@include wid(1500)       {  }
+@include wid(1200-1499)  {  }
+@include wid(992-1199)   {  } 
+@include wid(601-991)    {  } 
+@include wid(600)        {  } 
 
 ```
 
