@@ -3620,7 +3620,7 @@ position: absolute;
 
 //      background: #62c8eb url(../img/section__3_back.png) no-repeat top/cover;
    
-//      overflow: hidden;
+      overflow: hidden;
       position: relative;
 
       @include wid(992)      { padding: 80px 0 0px }
@@ -3744,7 +3744,7 @@ position: absolute;
            
       @include wid(992)      { right: -100px; top: -40px; }
       @include wid(601-991)  { right: -100px; top: -40px; }
-      @include wid(600)      { right: -50px; top: -50px; }
+      @include wid(600)      { right: -50px; top: -20px; }
            
               animation: 11.3s fish 1.8s infinite !important;
 
@@ -3926,9 +3926,9 @@ position: absolute;
        
        &>.row{
        
-@include wid(992)  {          padding: 70px 0 50px 0; }
-@include wid(601-991)  {          padding: 200px 0 150px 0; }
-@include wid(600)  {         padding: 200px 0 150px 0; }
+      @include wid(992)  {          padding: 70px 0 50px 0; }
+      @include wid(601-991)  {          padding: 200px 0 150px 0; }
+      @include wid(600)  {         padding: 200px 0 150px 0; }
        
        
        position: relative;
@@ -3998,16 +3998,16 @@ position: absolute;
 
    .brand.cont__{
         
-        
-            @for $i from 1 through 20 {
-                div:nth-child(#{$i})>.li {
+
+      @for $i from 1 through 20 {
+          div:nth-child(#{$i})>.li {
 //                  margin-left: calc(#{$i}s*25);
-                  
-                   opacity: 1;
-                     transition:  calc(#{$i}s*.3) all  calc(#{$i}s*.15)  ease;
-                     transform: translateY(0px);
-                }
-              }
+
+             opacity: 1;
+               transition:  calc(#{$i}s*.3) all  calc(#{$i}s*.15)  ease;
+               transform: translateY(0px);
+          }
+      }
         
       }
            
