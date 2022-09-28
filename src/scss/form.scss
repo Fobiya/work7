@@ -1,4 +1,32 @@
-
+@mixin wid($size) {
+   @if $size == 1500 {
+    @media (min-width: 1500px) { @content; }
+  } @else if $size == 1200-1499 {
+    @media (min-width: 1200px) and (max-width: 1499px) { @content; }
+  } @else if $size == 1200 {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == 992-1199 {
+    @media (min-width: 992px) and (max-width: 1199px) { @content; }
+  } @else if $size == 992-1300 {
+    @media (min-width: 992px) and (max-width: 1130px) { @content; }
+  } @else if $size == 992{
+    @media (min-width: 992px) { @content; }
+  } @else if $size == 991 {
+    @media (max-width: 991px) { @content; }
+  } @else if $size == 601-991 {
+    @media (min-width: 601px) and (max-width: 991px) { @content; }
+  } @else if $size == 600 {
+    @media (max-width: 600px) { @content; }
+  }@else if $size == 500 {
+    @media (max-width: 500px) { @content; }
+  }@else if $size == 450 {
+    @media (max-width: 450px) { @content; }
+  }@else if $size == 400 {
+    @media (max-width: 400px) { @content; }
+  }@else if $size == 350 {
+    @media (max-width: 350px) { @content; }
+  }
+}
 
 // =========================================================== 
 // FORMAS 
@@ -93,12 +121,14 @@
 //  float: left;
 //  margin-right: 10px;
 //  margin-top: 2px;
-//}
-input.error{
-  color: #ff0000 !important;
+//} 
+input.wpcf7-not-valid,input.error{
+  color: rgba(231, 29, 54, 1);
+  
+  border: 1px solid rgba(231, 29, 54, 1);
 
     &:focus::placeholder,  &::placeholder { 
-        color: #ff0000;
+        color: rgba(231, 29, 54, 1);
 
   }
 }
@@ -246,19 +276,20 @@ input {
   margin-bottom: 10px;
   color: #263954;
 	
-  font: 400 14px/1.2em var(--p);
+  font: 400 16px/1.2em var(--i);
+  color: #14cdcd;
 
   &::placeholder {
 //    text-shadow: 0 0 15px rgba(22, 5, 74, 0.51);
-      color: rgba(149, 166, 200, 1);
+     color: #263954;
     transition: opacity 0.3s ease;
-   font: 400 14px/1.2em var(--p);
+   font: 400 14px/1.2em var(--i);
   }
 
   &:focus::placeholder {
-      color: rgba(149, 166, 200, 1);
+     color: #263954;
     transition: opacity 0.3s ease;
-      font: 400 14px/1.2em var(--p);
+      font: 400 14px/1.2em var(--i);
   }
 
 
@@ -266,15 +297,22 @@ input {
 
 
 border: none;
-border: 1px solid rgba(233, 240, 251, 1);
-border-radius: 8px;
+border: 1px solid #E9F0FB;
+border-radius: 8px; 
 
   
   display: block;
   width: 100%;
   height: 100%;
-  max-height: 44px;
-  padding: 10px 12px;
+  
+  
+
+@include wid(992)        {   max-height: 64px;  padding: 20px 20px 20px  64px; }
+@include wid(601-991)    {   max-height: 64px;  padding: 20px 20px 20px  64px; }
+@include wid(600)        {   max-height: 49px;  padding: 15px 20px 15px  64px; }
+
+  
+
   background-color: #FFFFFF;
   background-image: transparent;
   
@@ -282,6 +320,176 @@ border-radius: 8px;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
   box-sizing: border-box;
   outline: none;
+}
+
+
+.form_input{
+  position: relative;
+}
+
+input{
+  
+//  position: relative;
+  
+  
+  
+//  &*{
+//    &:before{
+//      position: absolute !important;
+//      top: 20px  !important;
+//      left: 18px   !important;
+//                         
+//                  z-index: 3;
+//    }
+//  }
+//  
+  
+
+  
+           &.email,&.mail{
+               
+           background: #ffffff url(../img/email_1.svg)  no-repeat  center left 20px;  
+             
+             &:focus{
+               background: #ffffff url(../img/email_2.svg)  no-repeat  center left 20px;  
+             }
+             
+             &.error{
+               background: #ffffff url(../img/email_3.svg)  no-repeat  center left 20px;  
+             }
+
+           }
+                      
+           
+           
+           &.phone{
+             
+           background: #ffffff url(../img/phone_1.svg)  no-repeat  center left 20px;  
+             
+             &:focus{
+               background: #ffffff url(../img/phone_2.svg)  no-repeat  center left 20px;  
+             }
+             
+             &.error{
+               background: #ffffff url(../img/phone_3.svg)  no-repeat  center left 20px;  
+             }
+  
+           }
+                  
+           
+           &.name{
+             
+           background: #ffffff url(../img/name_1.svg)  no-repeat  center left 20px;  
+             
+             &:focus{
+               background: #ffffff url(../img/name_2.svg)  no-repeat  center left 20px;  
+             }
+             
+             &.error{
+               background: #ffffff url(../img/name_3.svg)  no-repeat  center left 20px;  
+             }
+             
+           }
+               
+           
+           &.destination{
+             
+           background: #ffffff url(../img/destination_1.svg)  no-repeat  center left 20px;  
+             
+             &:focus{
+               background: #ffffff url(../img/destination_2.svg)  no-repeat  center left 20px;  
+             }
+             
+             &.error{
+               background: #ffffff url(../img/destination_3.svg)  no-repeat  center left 20px;  
+             }
+   
+           }
+            
+            
+           &.data{
+
+             
+           background: #ffffff url(../img/data_1.svg)  no-repeat  center left 20px;  
+             
+             &:focus{
+               background: #ffffff url(../img/data_2.svg)  no-repeat  center left 20px;  
+             }
+             
+             &.error{
+               background: #ffffff url(../img/data_3.svg)  no-repeat  center left 20px;  
+             }
+             
+ 
+           }
+           
+           
+           &.from{
+             
+             
+           background: #ffffff url(../img/from_1.svg)  no-repeat  center left 20px;  
+             
+             &:focus{
+               background: #ffffff url(../img/from_2.svg)  no-repeat  center left 20px;  
+             }
+             
+             &.error{
+               background: #ffffff url(../img/from_3.svg)  no-repeat  center left 20px;  
+             }
+
+           }
+            
+           
+           &.to{
+             
+             
+           background: #ffffff url(../img/to_1.svg)  no-repeat  center left 20px;  
+             
+             &:focus{
+               background: #ffffff url(../img/to_2.svg)  no-repeat  center left 20px;  
+             }
+             
+             &.error{
+               background: #ffffff url(../img/to_3.svg)  no-repeat  center left 20px;  
+             }
+
+
+           }
+           
+           
+           &.port{
+             
+           background: #ffffff url(../img/port_1.svg)  no-repeat  center left 20px;  
+             
+             &:focus{
+               background: #ffffff url(../img/port_2.svg)  no-repeat  center left 20px;  
+             }
+             
+             &.error{
+               background: #ffffff url(../img/port_3.svg)  no-repeat  center left 20px;  
+             }
+             
+
+           }
+                      
+           
+           &.link{
+             
+           background: #ffffff url(../img/link_1.svg)  no-repeat  center left 20px;  
+             
+             &:focus{
+               background: #ffffff url(../img/link_2.svg)  no-repeat  center left 20px;  
+             }
+             
+             &.error{
+               background: #ffffff url(../img/link_3.svg)  no-repeat  center left 20px;  
+             }
+
+           }
+           
+  
+  
+  
 }
 
 

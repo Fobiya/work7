@@ -5085,7 +5085,7 @@ background: #FFC93F url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAABCA
     
   }
   
-  &.mod_2{
+  &.mod_2{ 
     
   .box__img{
         background: #fff;
@@ -5214,6 +5214,11 @@ border-radius: 12px;
     
     }
     
+    form{
+    @include wid(992)      {   margin: 24px 0;  }
+    @include wid(991)      {   margin: 20px 0; }
+    }
+    
     
   }
     
@@ -5338,7 +5343,7 @@ border-radius: 12px;
       text-align: center;
       
             @include wid(992)      {       margin: 16px -40px 32px;   padding: 20px 16px 32px;}
-      @include wid(991)      {      margin: 16px -16px 8px;    padding: 76px 16px 16px;}
+      @include wid(991)      {      margin: 16px -16px 28px;    padding: 76px 16px 16px;}
       
     
              @include wid(992)      {
@@ -6099,6 +6104,8 @@ footer{
     }
     
     form{
+      
+      max-width: 530px;   
       
       @include wid(991)      {  max-width: 450px; margin: 0 auto; }
       

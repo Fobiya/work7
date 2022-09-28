@@ -55,7 +55,7 @@ define(["jquery"], function($) {
                 
               }
 
-  });
+            });
 
           if (!(error == 1)) {
               $(send_btn).each(function () {
@@ -65,31 +65,33 @@ define(["jquery"], function($) {
                   var form = $(this).closest('form'),
                       name = form.find('.name').val();
                   if ($(this).val() == '') {
+                    
+                    console.log('done');
 
 
-                      $.ajax({
-                          type: 'POST',
-                          url: 'send.php',
-                        
-              
-                          data: msg,
-                          success: function() {
-                              $('form').trigger("reset");
-                              setTimeout(function(){  $("[name=send]").removeAttr("disabled"); }, 1000);
-                            
-                             window.location.href = '/success';
-
-                          },
-                          error: function(xhr, str) {
-                              alert('ERROR: ' + xhr.responseCode);
-                          }
-                      });
+//                      $.ajax({
+//                          type: 'POST',
+//                          url: 'send.php',
+//                        
+//              
+//                          data: msg,
+//                          success: function() {
+//                              $('form').trigger("reset");
+//                              setTimeout(function(){  $("[name=send]").removeAttr("disabled"); }, 1000);
+//                            
+//                             window.location.href = '/success';
+//
+//                          },
+//                          error: function(xhr, str) {
+//                              alert('ERROR: ' + xhr.responseCode);
+//                          }
+//                      });
 
                   }
 
 
               });
-          } ;
+          };
 
 
           return false;

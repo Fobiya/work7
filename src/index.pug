@@ -594,18 +594,14 @@ html(lang='en')
 
             form(method='POST', action='javascript:void(null);')
               // Hidden Required Fields
-              
-              ul
-                li
-                  label Name
-                  .form_input
-                    span.field
-                      input(type='text', name='name', required='', value='', placeholder='Name')
-                li
-                  label Email
-                  .form_input
-                    span.field
-                      input.mail(type='email', name='email', required='', value='', placeholder='Email')
+
+              .form_input
+                span.field
+                  input.name(type='text', name='name', required='', value='', placeholder='Name')
+
+              .form_input
+                span.field
+                  input.mail(type='email', name='email', required='', value='', placeholder='Email')
 
               button.red(type='submit', name='send') Sign up
 
@@ -647,7 +643,7 @@ html(lang='en')
 
               
                   
-    a.bot_modal.none(data-fancybox='',  href='#modal-1') Open Modal 1
+    a.bot_modal(data-fancybox='',  href='#modal-1') Open Modal 1
     // //// MODAL ////
     #modal-1.modal(style='display: none;')
     
@@ -671,22 +667,16 @@ html(lang='en')
               h4.title__ Website link
               .form_input
                 span.field
-                  input(type='url', name='link', required='', value='', placeholder='Paste Link Here')
+                  input.link(type='url', name='link', required='', value='', placeholder='Paste Link Here')
 
+            .form_input
+              span.field
+                input.name(type='text', name='name', required='', value='', placeholder='Name')
 
-            .column
-              div
-                label Name
-                .form_input
-                  span.field
-                    input(type='text', name='name', required='', value='', placeholder='Name')
-              div
-                label Phone number
-                .form_input
-                  span.field
-                    input.phone(type='text', name='phone', required='', value='', placeholder='Phone number')
+            .form_input
+              span.field
+                input.phone(type='text', name='phone', required='', value='', placeholder='Phone number')
 
-            label Email
             .form_input
               span.field
                 input.mail(type='email', name='email', required='', value='', placeholder='Email')
@@ -699,7 +689,7 @@ html(lang='en')
           
           
 
-    a.bot_modal.none(data-fancybox='', data-src='#modal-2', href='#modal-2') Open Modal 2
+    a.bot_modal(data-fancybox='', data-src='#modal-2', href='#modal-2') Open Modal 2
     // //// MODAL ////
     #modal-2.modal(style='display: none;')
       .content_modal.column.mod_2
@@ -723,7 +713,6 @@ html(lang='en')
 
           form(method='POST', action='javascript:void(null);')
             // Hidden Required Fields
-            label Phone number
 
             .form_input
               span.field
@@ -733,7 +722,7 @@ html(lang='en')
             button.red(type='submit', name='send') Send
 
 
-    a.bot_modal.none(data-fancybox='', data-src='#thx', href='#thx') thx
+    a.bot_modal(data-fancybox='', data-src='#thx', href='#thx') thx
     // //// MODAL ////
     #thx.modal(style='display: none;')
       .content_modal.thx
