@@ -84,70 +84,139 @@ html(lang='en')
           .col.m12.s12.l12.xl12
 
             h1.title Book Your Favorite Destination <br>and get up to 70% Off!
-            p.sub We have helped over 17,849 clients book their dream Vacation.
+            
             .box__cont__img
               img.image__left(src='img/section__1_ship.svg', alt='challenge')
               img.image__right(src='img/section__1_plane.svg', alt='challenge')
-            
-            .tab__form
-              form(method='POST', action='javascript:void(null);')
-                .form
-                  a.challenge(data-fancybox='', href='#modal-1')
-                    img(src='https://koyap.com/wp-content/themes/koyap/img/challenge.svg', alt='challenge')
-                  ul
-                    a.challenge(data-fancybox='', href='#modal-1')
-                    li.trip_toggle
-                      a.challenge(data-fancybox='', href='#modal-1')
-                      .box__tab
-                        a.cruise.select(href='javascript:;') Cruise
-                        a.travelling(href='javascript:;') Flight
-                    li.email
-                      .block
-                        lable Email
+             
+            .block__
+              .tab__form.tab__active
+                a.challenge(data-fancybox='', href='#modal-1')
+                  img(src='https://koyap.com/wp-content/themes/koyap/img/challenge.svg', alt='challenge')
+
+                form(method='POST', action='javascript:void(null);')
+                  .form
+                    ul 
+                      li
+                        .box__tab
+                          a.cruise.select(href='javascript:;' data-tabs='1') Cruise
+                          a.travelling(href='javascript:;' data-tabs='2') Flight
+                      li
+
                         .form_input
                           span.field
-                            input.mail(type='email', name='email', required='', value='', placeholder='Email')
+                            input.email(type='email', name='email', required='', value='', placeholder='Email')
 
-                    li.phone
-                      .block
-                        lable Phone Number
+                      li
+
                         .form_input
                           span.field
                             input.phone(type='text', name='phone', required='', value='', placeholder='Add phone number')
-                    li.name
-                      .block
-                        lable Name
+                      li
                         .form_input
                           span.field
-                            input.phone(type='text', name='name', required='', value='', placeholder='Add your name')
-                            
-                    hr
+                            input.name(type='text', name='name', required='', value='', placeholder='Add your name')
 
-                    // <div class="" id="cruise">
-                    li.destination(data-type='cruise')
-                      .block
-                        lable Destination
+                      hr
+
+                      // <div class="" id="cruise">
+                      li(data-type='cruise')
                         .form_input
                           span.field
-                            input(type='text', name='destination', required='', value='', placeholder='Add destination')
-                    li.sel_50.port(data-type='cruise')
-                      .block
-                        lable Departure Port
-                        .form_input.autocomplete
-                          span.field
-                            input#cruise_from(type='text', name='destination', required='', value='', placeholder='Add departure port')
+                            select.destination(name='destination')
+                              option(value='-') Destination
+                              option(value='1') Destination 1
+                              option(value='2') Destination 2
+                              option(value='3') Destination 3
 
-                    li.data.dep_date(data-type='cruise')
-                      .block
-                        lable Departure date
+
+
+                      li.sel_50(data-type='cruise')
                         .form_input
                           span.field
-                            input.flatpkr_dep_date.flatpickr-input(type='text', name='data', required='', value='', placeholder='Add date', readonly='readonly')
-                    // </div>
-                    // <div class="hide" id="flight">
+                            select.port(name='Add departure port')
+                              option(value='-') Add departure port
+                              option(value='1') Add departure port 1
+                              option(value='2') Add departure port 2
+                              option(value='3') Add departure port 3
 
-                    // </div>
-                button#get_quote.red(type='submit', name='send') Get a free quote
+
+                      li(data-type='cruise')
+                        .form_input
+                          span.field
+                            input.data(type='date', name='data', required='', value='', placeholder='Add date', readonly='readonly')
+                      // </div>
+                      // <div class="hide" id="flight">
+
+                      // </div>
+                  button#get_quote.red(type='submit', name='send') Get a free quote
+
+
+              .tab__form
+                a.challenge(data-fancybox='', href='#modal-1')
+                  img(src='https://koyap.com/wp-content/themes/koyap/img/challenge.svg', alt='challenge')
+
+                form(method='POST', action='javascript:void(null);')
+                  .form
+                    ul 
+                      li
+                        .box__tab
+                          a.cruise.select(href='javascript:;' data-tabs='1') Cruise
+                          a.travelling(href='javascript:;' data-tabs='2') Flight
+                      li
+
+                        .form_input
+                          span.field
+                            input.email(type='email', name='email', required='', value='', placeholder='Email')
+
+                      li
+
+                        .form_input
+                          span.field
+                            input.phone(type='text', name='phone', required='', value='', placeholder='Add phone number')
+                      li
+                        .form_input
+                          span.field
+                            input.name(type='text', name='name', required='', value='', placeholder='Add your name')
+
+                      hr
+
+                      // <div class="" id="cruise">
+                      li(data-type='cruise')
+                        .form_input
+                          span.field
+                            select.from(name='from')
+                              option(value='-') from
+                              option(value='1') from 1
+                              option(value='2') from 2
+                              option(value='3') from 3
+
+
+
+                      li(data-type='cruise')
+                        .form_input
+                          span.field
+                            select.to(name='to')
+                              option(value='-') to
+                              option(value='1') to 1
+                              option(value='2') to 2
+                              option(value='3') to 3
+
+
+                      li(data-type='cruise')
+                        .form_input
+                          span.field
+                            input.data(type='date', name='departure', required='', value='', placeholder='Departure date', readonly='readonly')
+
+                      li(data-type='cruise')
+                        .form_input
+                          span.field
+                            input.data(type='date', name='return', required='', value='', placeholder='Return date', readonly='readonly')
+                      // </div>
+                      // <div class="hide" id="flight">
+
+                      // </div>
+                  button#get_quote.red(type='submit', name='send') Get a free quote
 
               
       .container

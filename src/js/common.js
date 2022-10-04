@@ -45,8 +45,19 @@ define(["jquery"], function($) {
 //      
 //    });
 
-  
-  
+    $('.section__1 .box__tab>a').click(function(){
+      
+      var tab = $(this).data('tabs');
+      
+//      console.log(tab);
+       
+       $('.section__1 .box__tab>a').removeClass('select');
+       $('.section__1 .box__tab>a:nth-child('+ tab +')').addClass('select');
+      
+      $('.tab__form').removeClass('tab__active');
+      $('.block__>div:nth-child('+ tab +')').addClass('tab__active');
+       
+    });
   
    $('.section__4 .tab__bot>a').click(function(){
 
