@@ -83,142 +83,191 @@ html(lang='en')
         .row
           .col.m12.s12.l12.xl12
 
-            h1.title Book Your Favorite Destination <br>and get up to 70% Off!
+            .header__offer
+              h1.title Book Your Favorite Destination <br>and get up to 70% Off!
+              h2.subtitle Get Up To 70% Off When You Book Your Favorite Destination with Koyap
+              p.desc As a leading travel agency in North America, we have partnered with the best cruise lines and airlines to provide you with the cheapest prices possible. Finding a cheap fare elsewhere? 
+                <br>Show it to us and we'll beat it!
             
             .box__cont__img
               img.image__left(src='img/section__1_ship.svg', alt='challenge')
               img.image__right(src='img/section__1_plane.svg', alt='challenge')
              
             .block__
-              .tab__form.tab__active
+              .header__form
                 a.challenge(data-fancybox='', href='#modal-1')
                   img(src='https://koyap.com/wp-content/themes/koyap/img/challenge.svg', alt='challenge')
 
-                form(method='POST', action='javascript:void(null);')
-                  .form
-                    ul 
-                      li
-                        .box__tab
-                          a.cruise.select(href='javascript:;' data-tabs='1') Cruise
-                          a.travelling(href='javascript:;' data-tabs='2') Flight
-                      li
+                .box__tab.ftype
+                  button(tupe="button", data-target="#f1content").tab-btn.select.cruise Cruise
+                  button(tupe="button", data-target="#flightContent").tab-btn.travelling Flight
 
+                .tab-content#f1content.show
+                  form(method='POST', action='javascript:void(null);')
+                    ul.form.f1
+                      li.fmail
                         .form_input
                           span.field
                             input.email(type='email', name='email', required='', value='', placeholder='Email')
 
-                      li
-
+                      li.ftel
                         .form_input
                           span.field
-                            input.phone(type='text', name='phone', required='', value='', placeholder='Add phone number')
-                      li
+                            input.phone(type='tel', name='phone', required='', value='', placeholder='Phone Number')
+                      
+                      li.fname
                         .form_input
                           span.field
-                            input.name(type='text', name='name', required='', value='', placeholder='Add your name')
+                            input.name(type='text', name='name', required='', value='', placeholder='Name')
 
-                      hr
+                      hr.fdivider
 
                       // <div class="" id="cruise">
-                      li(data-type='cruise')
+                      li(data-type='cruise').fdest
                         .form_input
                           span.field
                             select.destination(name='destination')
-                              option(value='-') Destination
+                              option(value='-' selected disabled) Destination
                               option(value='1') Destination 1
                               option(value='2') Destination 2
                               option(value='3') Destination 3
 
 
 
-                      li.sel_50(data-type='cruise')
+                      li.sel_50(data-type='cruise').fdep
                         .form_input
                           span.field
                             select.port(name='Add departure port')
-                              option(value='-') Add departure port
-                              option(value='1') Add departure port 1
-                              option(value='2') Add departure port 2
-                              option(value='3') Add departure port 3
+                              option(value='-' selected disabled) Departure Port
+                              option(value='1') Departure Port 1
+                              option(value='2') Departure Port 2
+                              option(value='3') Departure Port 3
 
 
-                      li(data-type='cruise')
+                      li(data-type='cruise').fdate
                         .form_input
                           span.field
-                            input.data(type='date', name='data', required='', value='', placeholder='Add date', readonly='readonly')
-                      // </div>
-                      // <div class="hide" id="flight">
+                            input.data(type='text', name='data', required='', value='', placeholder='Departure date', readonly='readonly')
 
-                      // </div>
-                  button#get_quote.red(type='submit', name='send') Get a free quote
+                    .form__actions
+                      // #TODO: error text
+                      .form__error(style="display: none;") Please fill all fields with valid information
+                      
+                      button#get_quote.red(type='submit', name='send') Get a free quote
+
+                .tab-content#flightContent
+                  .fway
+                    .box__tab
+                      button(tupe="button", data-target="#f2content").tab-btn.select One way
+                      button(tupe="button", data-target="#f3content").tab-btn Round trip 
+
+                  .tab-content#f2content.show  
+                    form(method='POST', action='javascript:void(null);')
+                      ul.form.f2 
+                        li.fmail
+                          .form_input
+                            span.field
+                              input.email(type='email', name='email', required='', value='', placeholder='Email')
+
+                        li.ftel
+                          .form_input
+                            span.field
+                              input.phone(type='text', name='phone', required='', value='', placeholder='Phone Number')
+                        
+                        li.fname
+                          .form_input
+                            span.field
+                              input.name(type='text', name='name', required='', value='', placeholder='Name')
+
+                        hr.fdivider
+
+                        li(data-type='cruise').ffrom
+                          .form_input
+                            span.field
+                              select.from(name='from')
+                                option(value='-' selected disabled) From
+                                option(value='1') from 1
+                                option(value='2') from 2
+                                option(value='3') from 3
+
+                        li(data-type='cruise').fto
+                          .form_input
+                            span.field
+                              select.to(name='to')
+                                option(value='-' selected disabled) To
+                                option(value='1') To 1
+                                option(value='2') to 2
+                                option(value='3') to 3
+
+                        li(data-type='cruise').fdep
+                          .form_input
+                            span.field
+                              input.data(type='text', name='departure', required='', value='', placeholder='Departure date', readonly='readonly')
+
+                      .form__actions
+                        // #TODO: error text
+                        .form__error(style="display: none;") Please fill all fields with valid information
+                        
+                        button#get_quote.red(type='submit', name='send') Get a free quote
+
+                  .tab-content#f3content  
+                    form(method='POST', action='javascript:void(null);')
+                      ul.form.f3 
+                        li.fmail
+                          .form_input
+                            span.field
+                              input.email(type='email', name='email', required='', value='', placeholder='Email')
+
+                        li.ftel
+                          .form_input
+                            span.field
+                              input.phone(type='text', name='phone', required='', value='', placeholder='Phone Number')
+                        
+                        li.fname
+                          .form_input
+                            span.field
+                              input.name(type='text', name='name', required='', value='', placeholder='Name')
+
+                        hr.fdivider
+
+                        li(data-type='cruise').ffrom
+                          .form_input
+                            span.field
+                              select.from(name='from')
+                                option(value='-' selected disabled) From
+                                option(value='1') from 1
+                                option(value='2') from 2
+                                option(value='3') from 3
 
 
-              .tab__form
-                a.challenge(data-fancybox='', href='#modal-1')
-                  img(src='https://koyap.com/wp-content/themes/koyap/img/challenge.svg', alt='challenge')
 
-                form(method='POST', action='javascript:void(null);')
-                  .form
-                    ul 
-                      li
-                        .box__tab
-                          a.cruise.select(href='javascript:;' data-tabs='1') Cruise
-                          a.travelling(href='javascript:;' data-tabs='2') Flight
-                      li
-
-                        .form_input
-                          span.field
-                            input.email(type='email', name='email', required='', value='', placeholder='Email')
-
-                      li
-
-                        .form_input
-                          span.field
-                            input.phone(type='text', name='phone', required='', value='', placeholder='Add phone number')
-                      li
-                        .form_input
-                          span.field
-                            input.name(type='text', name='name', required='', value='', placeholder='Add your name')
-
-                      hr
-
-                      // <div class="" id="cruise">
-                      li(data-type='cruise')
-                        .form_input
-                          span.field
-                            select.from(name='from')
-                              option(value='-') from
-                              option(value='1') from 1
-                              option(value='2') from 2
-                              option(value='3') from 3
+                        li(data-type='cruise').fto
+                          .form_input
+                            span.field
+                              select.to(name='to')
+                                option(value='-' selected disabled) To
+                                option(value='1') To 1
+                                option(value='2') to 2
+                                option(value='3') to 3
 
 
+                        li(data-type='cruise').fdep
+                          .form_input
+                            span.field
+                              input.data(type='text', name='departure', required='', value='', placeholder='Departure date', readonly='readonly')
+                        
+                        li(data-type='cruise').fdate
+                          .form_input
+                            span.field
+                              input.data(type='text', name='return', required='', value='', placeholder='Return date', readonly='readonly')
 
-                      li(data-type='cruise')
-                        .form_input
-                          span.field
-                            select.to(name='to')
-                              option(value='-') to
-                              option(value='1') to 1
-                              option(value='2') to 2
-                              option(value='3') to 3
+                      .form__actions
+                        // #TODO: error text
+                        .form__error(style="display: none;") Please fill all fields with valid information
+                        
+                        button#get_quote.red(type='submit', name='send') Get a free quote
 
 
-                      li(data-type='cruise')
-                        .form_input
-                          span.field
-                            input.data(type='date', name='departure', required='', value='', placeholder='Departure date', readonly='readonly')
-
-                      li(data-type='cruise')
-                        .form_input
-                          span.field
-                            input.data(type='date', name='return', required='', value='', placeholder='Return date', readonly='readonly')
-                      // </div>
-                      // <div class="hide" id="flight">
-
-                      // </div>
-                  button#get_quote.red(type='submit', name='send') Get a free quote
-
-              
       .container
         .row
           .col.m12.s12.l12.xl12

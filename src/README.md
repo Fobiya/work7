@@ -1,3 +1,8 @@
+### To Start
+
+npm run dev
+npm run goo
+
 ### Source code
 
 [![npm](https://badgen.net/npm/v/@babel/core)](https://github.com/Fobiya/coursecode)
