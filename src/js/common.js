@@ -25,31 +25,6 @@ define(["jquery"], function ($) {
     $(".call").addClass("bot");
   });
 
-  //    $('.section__1 .box__tab>a').click(function(){
-  //
-  //            var $info = $(this).data('tab');
-  //
-  //       $('.section__1 .box__tab>a').removeClass('select');
-  //       $('.section__1 .box__tab>a:nth-child(' + $info + ')').addClass('select');
-  //
-  //      $('.section__1 .tab__form>div').removeClass('active');
-  //       $('.section__1 .tab__form>div:nth-child(' + $info + ')').addClass('active');
-  //
-  //
-  //    });
-
-  $(".section__1 .box__tab>a").click(function () {
-    var tab = $(this).data("tabs");
-
-    //      console.log(tab);
-
-    $(".section__1 .box__tab>a").removeClass("select");
-    $(".section__1 .box__tab>a:nth-child(" + tab + ")").addClass("select");
-
-    $(".tab__form").removeClass("tab__active");
-    $(".block__>div:nth-child(" + tab + ")").addClass("tab__active");
-  });
-
   $(".section__4 .tab__bot>a").click(function () {
     $(".section__4 .tab__bot>a").removeClass("active");
     $(this).toggleClass("active");
@@ -794,11 +769,11 @@ define(["jquery"], function ($) {
   // SLICK SLIDER FULL NAVIGATION
   // ===========================================================
 
-  $("a.next__2").click(function () {
+  $("button.next__2").click(function () {
     $slick__.slick("slickNext");
   });
 
-  $("a.prev__2").click(function () {
+  $("button.prev__2").click(function () {
     $slick__.slick("slickPrev");
   });
 
@@ -810,7 +785,7 @@ define(["jquery"], function ($) {
     autoplay: false,
     speed: 1000,
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
 
     centerMode: true,

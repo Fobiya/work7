@@ -82,17 +82,17 @@ html(lang='en')
       .container
         .row
           .col.m12.s12.l12.xl12
-
+           
+            .box__cont__img
+              img.image__left(src='img/section__1_ship.svg', alt='challenge')
+              img.image__right(src='img/section__1_plane.svg', alt='challenge')
+             
             .header__offer
               h1.title Book Your Favorite Destination <br>and get up to 70% Off!
               h2.subtitle Get Up To 70% Off When You Book Your Favorite Destination with Koyap
               p.desc As a leading travel agency in North America, we have partnered with the best cruise lines and airlines to provide you with the cheapest prices possible. Finding a cheap fare elsewhere? 
                 <br>Show it to us and we'll beat it!
-            
-            .box__cont__img
-              img.image__left(src='img/section__1_ship.svg', alt='challenge')
-              img.image__right(src='img/section__1_plane.svg', alt='challenge')
-             
+
             .block__
               .header__form
                 a.challenge(data-fancybox='', href='#modal-1')
@@ -268,6 +268,7 @@ html(lang='en')
                         button#get_quote.red(type='submit', name='send') Get a free quote
 
 
+    section.section-brands
       .container
         .row
           .col.m12.s12.l12.xl12
@@ -292,8 +293,6 @@ html(lang='en')
                 
             .image__right
               img(src='img/section__1_parrot_1.svg', alt='challenge')
-
-
 
 
     section.section__2
@@ -432,8 +431,17 @@ html(lang='en')
 
                   .box__bottom 
                     p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
+          
+          .slick__arrows 
+            .container
+              button.slick-prev.slick-arrow.prev__2(aria-label='Previous' type='button' style='display: block;') Previous
+              button.slick-next.slick-arrow.next__2(aria-label='Next' type='button' style='display: block;') Next
 
-          a.red__border(href='javascript:;') Show all Testimonials
+
+          .testimonials__desc 
+            | We have helped over   
+            strong 17,849 clients
+            |  book their dream vacation.
 
 
           
@@ -776,7 +784,7 @@ html(lang='en')
           form(method='POST', action='javascript:void(null);')
             // Hidden Required Fields
             
-            h3.title Send us a link to the lowest fair you can find online.
+            h3.title Send us a link to the lowest fare you can find online.
             h3.title.red__title We’ll   It!*
             
 
@@ -818,7 +826,7 @@ html(lang='en')
           
         .box__content
           h3.title Call to speak
-          p Just send us a link to the price and watch us beat it
+          p Live concierge available 24/7
 
           .namber
             p 1-800-xxx-xxxx
@@ -827,7 +835,7 @@ html(lang='en')
 
           h3.title Request a free callback
           
-          p Just send us a link to the price and watch us beat it
+          p Get a call from a travel expert and free advice within minutes
 
           form(method='POST', action='javascript:void(null);')
             // Hidden Required Fields
