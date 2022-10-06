@@ -986,7 +986,8 @@ section.section__1 {
   //      background: #F5F8FC url(../img/section__1_back.png) no-repeat  top center/contain;
   //
   @include wid(1500) {
-    background: #F5F8FC url(../img/section__1_back_3840.png) no-repeat top center !important;
+    background: #F5F8FC url(../img/section__1_back_3840.png) no-repeat top center;
+    background-size: 100% 920px;
   }
 
   @include wid(1200-1499) {
